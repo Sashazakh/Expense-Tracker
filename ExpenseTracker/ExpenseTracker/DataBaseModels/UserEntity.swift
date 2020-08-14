@@ -7,3 +7,84 @@
 //
 
 import Foundation
+import CoreData
+
+class UserEntity: NSManagedObject
+{
+    class func create(user: User, context: NSManagedObjectContext) throws -> UserEntity
+    {
+        let request: NSFetchRequest<UserEntity> = UserEntity.fetchRequest()
+        
+        do {
+            let fetchResult = try UserCoreDataManager.shared.context.fetch(request)
+            
+            if fetchResult.count > 0
+            {
+                return fetchResult[0]
+            }
+        } catch
+        {
+            throw error
+        }
+        
+        let userEntity = UserEntity(context: context)
+        
+        userEntity.convertFromUser(user: user)
+        
+        return userEntity
+    }
+    
+    class func getUser(context: NSManagedObjectContext, _ complitionHandler: (UserEntity) -> Void) throws -> Void
+    {
+        
+        let request: NSFetchRequest<UserEntity> = UserEntity.fetchRequest()
+        
+        do {
+            let fetchResult = try UserCoreDataManager.shared.context.fetch(request)
+            
+            if fetchResult.count == 1
+            {
+                complitionHandler(fetchResult[0])
+            }
+            else if fetchResult.count == 0
+            {
+                let userEntiry = try self.create(user: User.shared, context: context)
+                complitionHandler(userEntiry)
+            }
+        } catch
+        {
+            throw error
+        }
+    }
+    
+    class func editUser(user: User, context: NSManagedObjectContext) throws
+    {
+        let request: NSFetchRequest<UserEntity> = UserEntity.fetchRequest()
+        
+        do {
+            let fetchResult = try UserCoreDataManager.shared.context.fetch(request)
+            
+            if fetchResult.count == 0
+            {
+                try UserEntity.create(user: user, context: context)
+            }
+            else if fetchResult.count == 1
+            {
+                
+                try UserEntity.getUser(context: context, { (userEntity) in
+                    userEntity.convertFromUser(user: user)
+                })
+            }
+        } catch
+        {
+            throw error
+        }
+    }
+    
+    func convertFromUser(user: User)
+    {
+        self.expense = Int64(user.expense)
+        self.name = user.name
+        self.surname = user.surname
+    }
+}

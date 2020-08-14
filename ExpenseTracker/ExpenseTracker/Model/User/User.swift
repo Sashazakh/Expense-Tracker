@@ -11,10 +11,21 @@ import Foundation
 
 class User
 {
-    var name: String?
-    var surname: String?
-    var expense: Int?
+    var name: String
+    var surname: String
+    var expense: Int
     
+    init() {
+        self.name = ""
+        self.surname = ""
+        self.expense = 0
+    }
+    
+    init(name: String, surname: String, expense: Int) {
+        self.name = name
+        self.surname = surname
+        self.expense = expense
+    }
     
     static let shared =  User()
 }
