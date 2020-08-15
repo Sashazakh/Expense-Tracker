@@ -39,6 +39,7 @@ class MainBar: UITabBar {
         middleButton.backgroundColor = .darkGray
         middleButton.layer.cornerRadius = 35
         middleButton.layer.masksToBounds = true
+        middleButton.setImage(UIImage(named: "Plus"), for: .normal)
         middleButton.center = CGPoint(x: UIScreen.main.bounds.width / 2, y: 0)
         middleButton.addTarget(self, action: #selector(showVc), for: .touchUpInside)
         addSubview(middleButton)

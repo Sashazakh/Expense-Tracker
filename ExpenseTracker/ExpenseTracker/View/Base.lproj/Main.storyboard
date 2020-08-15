@@ -128,7 +128,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="iCM-jD-G2k">
             <objects>
                 <viewController storyboardIdentifier="profileVc" id="esi-s1-xqi" customClass="ProfileViewController" customModule="ExpenseTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -206,7 +206,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LZn-J0-C3z"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="hIM-Gj-HU6"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="hIM-Gj-HU6"/>
                     <connections>
                         <outlet property="cashFlowView" destination="y84-Up-smC" id="uXO-5N-P9K"/>
                         <outlet property="mainView" destination="hqY-Hu-Gel" id="Vlk-4T-vjO"/>
@@ -251,4 +251,7 @@
             <point key="canvasLocation" x="1664" y="-44"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Profile" width="30" height="30"/>
+    </resources>
 </document>
