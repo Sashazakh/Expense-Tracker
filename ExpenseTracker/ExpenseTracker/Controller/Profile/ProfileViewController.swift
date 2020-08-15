@@ -1,5 +1,5 @@
 //
-//  TabBarController.swift
+//  ProfileViewController.swift
 //  ExpenseTracker
 //
 //  Created by Apple Deveopment on 15.08.2020.
@@ -8,13 +8,15 @@
 
 import UIKit
 
-class TabBarController: UITabBarController {
+class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var mainView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBar.isTranslucent = false
-        self.tabBar.barTintColor = .darkGray
+        
+        mainView.layer.cornerRadius = 20
+        mainView.clipsToBounds = true
     }
-    
-   
+
 }

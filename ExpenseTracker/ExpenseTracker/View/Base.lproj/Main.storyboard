@@ -131,7 +131,7 @@
         <!--Item-->
         <scene sceneID="iCM-jD-G2k">
             <objects>
-                <viewController storyboardIdentifier="profileVc" id="esi-s1-xqi" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profileVc" id="esi-s1-xqi" customClass="ProfileViewController" customModule="ExpenseTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KpS-3U-PL5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,7 +143,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqY-Hu-Gel">
-                                <rect key="frame" x="20" y="127" width="374" height="666"/>
+                                <rect key="frame" x="20" y="127" width="374" height="646"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUJ-6b-pXc">
+                                        <rect key="frame" x="8" y="41" width="59" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
+                                        <color key="textColor" red="0.87426036596298218" green="0.87820714712142944" blue="0.89469367265701294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.73824226859999997" green="0.49682724480000001" blue="0.4943165779" alpha="0.30388484589041098" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -151,14 +160,17 @@
                         <constraints>
                             <constraint firstItem="LZn-J0-C3z" firstAttribute="trailing" secondItem="hqY-Hu-Gel" secondAttribute="trailing" constant="20" id="1oK-rN-EsN"/>
                             <constraint firstItem="hqY-Hu-Gel" firstAttribute="top" secondItem="d8g-7l-22x" secondAttribute="bottom" constant="20" id="HP4-my-ZAE"/>
-                            <constraint firstItem="LZn-J0-C3z" firstAttribute="bottom" secondItem="hqY-Hu-Gel" secondAttribute="bottom" constant="20" id="I9r-Ph-QNp"/>
                             <constraint firstItem="hqY-Hu-Gel" firstAttribute="leading" secondItem="LZn-J0-C3z" secondAttribute="leading" constant="20" id="boA-kt-ouh"/>
                             <constraint firstItem="d8g-7l-22x" firstAttribute="top" secondItem="LZn-J0-C3z" secondAttribute="top" constant="40" id="cRh-B8-UC9"/>
+                            <constraint firstItem="LZn-J0-C3z" firstAttribute="bottom" secondItem="hqY-Hu-Gel" secondAttribute="bottom" constant="40" id="kKm-ZT-LIn"/>
                             <constraint firstItem="d8g-7l-22x" firstAttribute="centerX" secondItem="KpS-3U-PL5" secondAttribute="centerX" id="l5Q-uU-Ycd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LZn-J0-C3z"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="hIM-Gj-HU6"/>
+                    <connections>
+                        <outlet property="mainView" destination="hqY-Hu-Gel" id="Vlk-4T-vjO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YJP-Wr-h73" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
