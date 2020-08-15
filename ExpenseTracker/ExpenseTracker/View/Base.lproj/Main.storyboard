@@ -142,39 +142,79 @@
                                 <color key="textColor" red="0.73824226859999997" green="0.49682724480000001" blue="0.4943165779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqY-Hu-Gel">
-                                <rect key="frame" x="20" y="127" width="374" height="646"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="eSj-aD-lzv">
+                                <rect key="frame" x="20" y="275" width="374" height="346"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUJ-6b-pXc">
-                                        <rect key="frame" x="8" y="41" width="59" height="19"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
-                                        <color key="textColor" red="0.87426036596298218" green="0.87820714712142944" blue="0.89469367265701294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqY-Hu-Gel">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUJ-6b-pXc">
+                                                <rect key="frame" x="10" y="40" width="59" height="19"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
+                                                <color key="textColor" red="0.87426036596298218" green="0.87820714712142944" blue="0.89469367265701294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Surname:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yz-RO-oCS">
+                                                <rect key="frame" x="10" y="91" width="86" height="19"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
+                                                <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.73824226859999997" green="0.49682724480000001" blue="0.4943165779" alpha="0.30388484589041098" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="Qit-sf-bpb"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y84-Up-smC">
+                                        <rect key="frame" x="0.0" y="196" width="374" height="150"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cash Flow:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RpR-8H-bqJ">
+                                                <rect key="frame" x="10" y="10" width="99.5" height="19"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
+                                                <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.73824226859999997" green="0.49682724480000001" blue="0.4943165779" alpha="0.30388484589999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="RpR-8H-bqJ" firstAttribute="leading" secondItem="y84-Up-smC" secondAttribute="leading" constant="10" id="KwF-aS-if8"/>
+                                            <constraint firstAttribute="height" constant="150" id="ghu-oG-EaV"/>
+                                            <constraint firstItem="RpR-8H-bqJ" firstAttribute="top" secondItem="y84-Up-smC" secondAttribute="top" constant="10" id="hQA-c6-MCG"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.73824226859999997" green="0.49682724480000001" blue="0.4943165779" alpha="0.30388484589041098" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="y84-Up-smC" secondAttribute="bottom" id="4xc-85-D1u"/>
+                                    <constraint firstItem="hqY-Hu-Gel" firstAttribute="leading" secondItem="eSj-aD-lzv" secondAttribute="leading" id="9WH-R8-Npk"/>
+                                    <constraint firstAttribute="trailing" secondItem="y84-Up-smC" secondAttribute="trailing" id="J42-xq-S13"/>
+                                    <constraint firstItem="hqY-Hu-Gel" firstAttribute="top" secondItem="eSj-aD-lzv" secondAttribute="top" id="QCW-J7-g4L"/>
+                                    <constraint firstAttribute="trailing" secondItem="hqY-Hu-Gel" secondAttribute="trailing" id="Z3M-g2-7Ml"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.1253264248" green="0.12920945880000001" blue="0.14165943859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="LZn-J0-C3z" firstAttribute="trailing" secondItem="hqY-Hu-Gel" secondAttribute="trailing" constant="20" id="1oK-rN-EsN"/>
-                            <constraint firstItem="hqY-Hu-Gel" firstAttribute="top" secondItem="d8g-7l-22x" secondAttribute="bottom" constant="20" id="HP4-my-ZAE"/>
-                            <constraint firstItem="hqY-Hu-Gel" firstAttribute="leading" secondItem="LZn-J0-C3z" secondAttribute="leading" constant="20" id="boA-kt-ouh"/>
-                            <constraint firstItem="d8g-7l-22x" firstAttribute="top" secondItem="LZn-J0-C3z" secondAttribute="top" constant="40" id="cRh-B8-UC9"/>
-                            <constraint firstItem="LZn-J0-C3z" firstAttribute="bottom" secondItem="hqY-Hu-Gel" secondAttribute="bottom" constant="40" id="kKm-ZT-LIn"/>
-                            <constraint firstItem="d8g-7l-22x" firstAttribute="centerX" secondItem="KpS-3U-PL5" secondAttribute="centerX" id="l5Q-uU-Ycd"/>
+                            <constraint firstItem="LZn-J0-C3z" firstAttribute="trailing" secondItem="eSj-aD-lzv" secondAttribute="trailing" constant="20" id="dmr-w5-6CI"/>
+                            <constraint firstItem="d8g-7l-22x" firstAttribute="top" secondItem="LZn-J0-C3z" secondAttribute="top" constant="40" id="fvg-Hm-Ka8"/>
+                            <constraint firstItem="d8g-7l-22x" firstAttribute="centerX" secondItem="KpS-3U-PL5" secondAttribute="centerX" id="gte-kc-DKw"/>
+                            <constraint firstItem="eSj-aD-lzv" firstAttribute="centerX" secondItem="KpS-3U-PL5" secondAttribute="centerX" id="gyJ-pO-WxI"/>
+                            <constraint firstItem="eSj-aD-lzv" firstAttribute="centerY" secondItem="KpS-3U-PL5" secondAttribute="centerY" id="xAj-bD-ocH"/>
+                            <constraint firstItem="eSj-aD-lzv" firstAttribute="leading" secondItem="LZn-J0-C3z" secondAttribute="leading" constant="20" id="xWZ-mr-e0P"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LZn-J0-C3z"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="hIM-Gj-HU6"/>
                     <connections>
+                        <outlet property="cashFlowView" destination="y84-Up-smC" id="uXO-5N-P9K"/>
                         <outlet property="mainView" destination="hqY-Hu-Gel" id="Vlk-4T-vjO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YJP-Wr-h73" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="180" y="769"/>
+            <point key="canvasLocation" x="179.71014492753625" y="768.75"/>
         </scene>
         <!--Item-->
         <scene sceneID="io6-3p-fNx">

@@ -11,12 +11,16 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var cashFlowView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mainView.layer.cornerRadius = 20
         mainView.clipsToBounds = true
+        
+        cashFlowView.layer.cornerRadius = 20
+        cashFlowView.clipsToBounds = true
     }
 
 }
