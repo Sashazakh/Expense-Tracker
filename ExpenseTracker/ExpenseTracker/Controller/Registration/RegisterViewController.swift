@@ -10,6 +10,9 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var nameTF: UITextField!
+    @IBOutlet weak var surnameTF: UITextField!
+    @IBOutlet weak var moneyTF: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +21,16 @@ class RegisterViewController: UIViewController {
         registerButton.clipsToBounds = true
     }
     
+    func createUser() -> User
+    {
+        return User(name: nameTF.text!, surname: surnameTF.text!, expense: Int(moneyTF.text!)!)
+    }
     
     @IBAction func buttonAction(_ sender: UIButton) {
+        
+        
+        UserCoreDataManager.shared.findOrCreate(user: createUser()) { (userEnt) in
+            
+        }
     }
 }

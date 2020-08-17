@@ -13,6 +13,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var cashFlowView: UIView!
     
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var surnameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +24,14 @@ class ProfileViewController: UIViewController {
         
         cashFlowView.layer.cornerRadius = 20
         cashFlowView.clipsToBounds = true
+        
+        loadUser()
+    }
+    
+    func loadUser()
+    {
+        userNameLabel.text = User.shared.name
+        surnameLabel.text = User.shared.surname
     }
 
 }

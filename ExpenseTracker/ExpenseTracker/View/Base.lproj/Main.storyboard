@@ -122,7 +122,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="moneyTF" destination="cHw-Pz-SLt" id="afz-U7-aF7"/>
+                        <outlet property="nameTF" destination="RkO-Jv-2n6" id="xHZ-W3-Ahp"/>
                         <outlet property="registerButton" destination="AKV-sX-Orz" id="aCU-e8-hZX"/>
+                        <outlet property="surnameTF" destination="fSB-j3-DqH" id="ps7-AN-PbS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -145,19 +148,32 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="eSj-aD-lzv">
                                 <rect key="frame" x="20" y="275" width="374" height="346"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqY-Hu-Gel">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqY-Hu-Gel" customClass="UserView" customModule="ExpenseTracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUJ-6b-pXc">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUJ-6b-pXc">
                                                 <rect key="frame" x="10" y="40" width="59" height="19"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
                                                 <color key="textColor" red="0.87426036596298218" green="0.87820714712142944" blue="0.89469367265701294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Surname:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yz-RO-oCS">
-                                                <rect key="frame" x="10" y="91" width="86" height="19"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Surname:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yz-RO-oCS">
+                                                <rect key="frame" x="10" y="89.5" width="85.5" height="19"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
+                                                <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Hv-h3-Pcv">
+                                                <rect key="frame" x="104" y="89.5" width="262" height="19"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="262" id="ij9-hS-miq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
+                                                <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODX-VD-n6R">
+                                                <rect key="frame" x="77" y="40" width="289" height="19"/>
                                                 <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
                                                 <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -165,7 +181,16 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.73824226859999997" green="0.49682724480000001" blue="0.4943165779" alpha="0.30388484589041098" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="ODX-VD-n6R" secondAttribute="trailing" constant="8" id="46w-a9-2FH"/>
+                                            <constraint firstItem="8yz-RO-oCS" firstAttribute="top" secondItem="ODX-VD-n6R" secondAttribute="bottom" constant="30.5" id="69P-8f-3wQ"/>
+                                            <constraint firstItem="ODX-VD-n6R" firstAttribute="top" secondItem="hqY-Hu-Gel" secondAttribute="top" constant="40" id="8R7-aV-NVd"/>
+                                            <constraint firstItem="8yz-RO-oCS" firstAttribute="leading" secondItem="hqY-Hu-Gel" secondAttribute="leading" constant="10" id="Agj-X1-M1M"/>
+                                            <constraint firstItem="JUJ-6b-pXc" firstAttribute="top" secondItem="hqY-Hu-Gel" secondAttribute="top" constant="40" id="EO6-2H-Hk7"/>
+                                            <constraint firstItem="ODX-VD-n6R" firstAttribute="leading" secondItem="JUJ-6b-pXc" secondAttribute="trailing" constant="8" id="I4d-qL-w2B"/>
                                             <constraint firstAttribute="height" constant="150" id="Qit-sf-bpb"/>
+                                            <constraint firstItem="JUJ-6b-pXc" firstAttribute="leading" secondItem="hqY-Hu-Gel" secondAttribute="leading" constant="10" id="UO5-DB-PBw"/>
+                                            <constraint firstItem="6Hv-h3-Pcv" firstAttribute="leading" secondItem="8yz-RO-oCS" secondAttribute="trailing" constant="8.5" id="mKz-R6-iUs"/>
+                                            <constraint firstItem="6Hv-h3-Pcv" firstAttribute="top" secondItem="ODX-VD-n6R" secondAttribute="bottom" constant="30.5" id="zqp-mG-vdk"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y84-Up-smC">
@@ -210,11 +235,13 @@
                     <connections>
                         <outlet property="cashFlowView" destination="y84-Up-smC" id="uXO-5N-P9K"/>
                         <outlet property="mainView" destination="hqY-Hu-Gel" id="Vlk-4T-vjO"/>
+                        <outlet property="surnameLabel" destination="6Hv-h3-Pcv" id="2TB-Px-ibr"/>
+                        <outlet property="userNameLabel" destination="ODX-VD-n6R" id="Ycc-EM-wLh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YJP-Wr-h73" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="179.71014492753625" y="768.75"/>
+            <point key="canvasLocation" x="1116" y="784"/>
         </scene>
         <!--Item-->
         <scene sceneID="io6-3p-fNx">
@@ -226,20 +253,28 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="G99-nR-8tu"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="S8t-8u-98B"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="S8t-8u-98B">
+                        <color key="badgeColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f9o-7L-Sau" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1280" y="759"/>
+            <point key="canvasLocation" x="2235" y="743"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2nH-y5-YyB">
             <objects>
-                <tabBarController id="Gxx-gh-VsC" customClass="TabBarController" customModule="ExpenseTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainTabBarVc" id="Gxx-gh-VsC" customClass="TabBarController" customModule="ExpenseTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Fb0-bg-1vh" customClass="MainBar" customModule="ExpenseTracker" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.20328450520833335" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="esi-s1-xqi" kind="relationship" relationship="viewControllers" id="Av7-GW-X9I"/>

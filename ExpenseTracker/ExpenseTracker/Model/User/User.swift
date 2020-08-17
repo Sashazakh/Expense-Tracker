@@ -19,6 +19,9 @@ class User
         self.name = ""
         self.surname = ""
         self.expense = 0
+        UserCoreDataManager.shared.findOrCreate(user: self) { (userEntity) in
+            self.convertEntity(entity: userEntity)
+        }
     }
     
     init(name: String, surname: String, expense: Int) {
@@ -28,4 +31,12 @@ class User
     }
     
     static let shared =  User()
+    
+    func convertEntity(entity: UserEntity)
+    {
+        print(entity.name!)
+        self.name = entity.name!
+        self.surname = entity.surname!
+        self.expense = Int(entity.expense)
+    }
 }

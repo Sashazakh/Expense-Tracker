@@ -16,18 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        var vc = UIViewController()
-//        if UserCoreDataManager.shared.isRegistered()
-//        {
-//            vc = storyboard.instantiateViewController(withIdentifier: "profileVc")
-//        } else
-//        {
-//            vc = storyboard.instantiateViewController(withIdentifier: "registerVc")
-//        }
-//        
-//        self.window?.rootViewController = vc
-//        self.window?.makeKeyAndVisible()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        var vc = UIViewController()
+        if UserCoreDataManager.shared.isRegistered()
+        {
+            vc = storyboard.instantiateViewController(withIdentifier: "mainTabBarVc")
+        } else
+        {
+            vc = storyboard.instantiateViewController(withIdentifier: "registerVc")
+        }
+
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
         return true
     }
 
