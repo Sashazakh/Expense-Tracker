@@ -21,13 +21,11 @@ class RegisterViewController: UIViewController {
         registerButton.clipsToBounds = true
     }
     
-    func createUser() -> User
-    {
-        return User(name: nameTF.text!, surname: surnameTF.text!, expense: Int(moneyTF.text!)!)
-    }
+
     
     @IBAction func buttonAction(_ sender: UIButton) {
-            UserCoreDataManager.shared.findOrCreate(user: createUser()) { (userEnt) in
+        User.shared.registerUser(name: nameTF.text, surname: surnameTF.text, balance: Int(moneyTF.text!))
+            UserCoreDataManager.shared.findOrCreate(user: User.shared) { (userEnt) in
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainTabBarVc")
             self.present(vc, animated: true)
         }

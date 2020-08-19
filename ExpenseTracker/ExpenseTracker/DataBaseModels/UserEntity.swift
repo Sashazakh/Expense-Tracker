@@ -87,8 +87,10 @@ class UserEntity: NSManagedObject
     
     func convertFromUser(user: User)
     {
-        self.expense = Int64(user.expense)
         self.name = user.name
         self.surname = user.surname
+        self.balance = Int64(user.balcance)
+        self.income = Int64(user.income)
+        self.expense = Int64(user.expense)
     }
 }

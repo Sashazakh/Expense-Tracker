@@ -18,6 +18,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var surnameLabel: UILabel!
     @IBOutlet weak var incomeView: UIView!
+    @IBOutlet weak var totalBalanceLabel: UILabel!
+    @IBOutlet weak var expenseLabel: UILabel!
+    @IBOutlet weak var incomeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +44,10 @@ class ProfileViewController: UIViewController {
     {
         userNameLabel.text = User.shared.name
         surnameLabel.text = User.shared.surname
+        totalBalanceLabel.text = String(User.shared.balcance) + " $"
+        expenseLabel.text = String(User.shared.expense) + " $"
+        incomeLabel.text = String(User.shared.income) + " $"
+        
     }
 
 }

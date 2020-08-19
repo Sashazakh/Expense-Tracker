@@ -306,10 +306,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="hIM-Gj-HU6"/>
                     <connections>
+                        <outlet property="expenseLabel" destination="cvk-Ce-qPL" id="K9b-rF-Hxj"/>
                         <outlet property="expenseView" destination="ZoW-Nt-U6H" id="uKg-xz-B70"/>
+                        <outlet property="incomeLabel" destination="InI-qs-q8Y" id="rb1-lQ-ybh"/>
                         <outlet property="incomeView" destination="WVv-hO-hDj" id="px8-WW-fQV"/>
                         <outlet property="mainView" destination="Qnv-Qo-d2e" id="euE-av-AGJ"/>
                         <outlet property="surnameLabel" destination="ztf-Nr-1xQ" id="yYa-oF-c28"/>
+                        <outlet property="totalBalanceLabel" destination="2sp-4a-H35" id="Pus-nl-1TW"/>
                         <outlet property="totalBalanceView" destination="MdG-72-uTc" id="xvT-YV-Mac"/>
                         <outlet property="userNameLabel" destination="bBx-bV-7wk" id="5PF-Bt-qIH"/>
                     </connections>

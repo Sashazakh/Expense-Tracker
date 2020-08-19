@@ -14,29 +14,37 @@ class User
     var name: String
     var surname: String
     var expense: Int
-    
-    init() {
+    var balcance: Int
+    var income: Int
+ 
+    private init() {
         self.name = ""
         self.surname = ""
         self.expense = 0
-        UserCoreDataManager.shared.findOrCreate(user: self) { (userEntity) in
-            self.convertEntity(entity: userEntity)
-        }
+        self.balcance = 0
+        self.income = 0
     }
     
-    init(name: String, surname: String, expense: Int) {
-        self.name = name
-        self.surname = surname
-        self.expense = expense
-    }
-    
-    static let shared =  User()
+    static let shared: User = {
+        let instance = User()
+        
+        return instance
+    } ()
     
     func convertEntity(entity: UserEntity)
     {
-        print(entity.name!)
         self.name = entity.name!
         self.surname = entity.surname!
         self.expense = Int(entity.expense)
+        self.income = Int(entity.income)
+        self.balcance = Int(entity.balance)
+        self.income = Int(entity.income)
+    }
+    
+    func registerUser(name: String?, surname: String?, balance: Int?)
+    {
+        self.name = name ?? ""
+        self.surname = surname ?? ""
+        self.balcance = balance ?? 0
     }
 }
