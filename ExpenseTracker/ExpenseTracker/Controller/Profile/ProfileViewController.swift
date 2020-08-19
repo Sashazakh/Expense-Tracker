@@ -11,10 +11,12 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var cashFlowView: UIView!
+    @IBOutlet weak var totalBalanceView: UIView!
+    @IBOutlet weak var expenseView: UIView!
     
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var surnameLabel: UILabel!
+    @IBOutlet weak var incomeView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +24,14 @@ class ProfileViewController: UIViewController {
         mainView.layer.cornerRadius = 20
         mainView.clipsToBounds = true
         
-        cashFlowView.layer.cornerRadius = 20
-        cashFlowView.clipsToBounds = true
+        totalBalanceView.layer.cornerRadius = 20
+        totalBalanceView.clipsToBounds = true
+        
+//        expenseView.layer.cornerRadius = 20
+//        expenseView.clipsToBounds = true
+//        
+//        incomeView.layer.cornerRadius = 20
+//        incomeView.clipsToBounds = true
         
         loadUser()
     }

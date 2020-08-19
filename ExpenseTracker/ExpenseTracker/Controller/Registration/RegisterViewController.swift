@@ -27,10 +27,9 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func buttonAction(_ sender: UIButton) {
-        
-        
-        UserCoreDataManager.shared.findOrCreate(user: createUser()) { (userEnt) in
-            
+            UserCoreDataManager.shared.findOrCreate(user: createUser()) { (userEnt) in
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainTabBarVc")
+            self.present(vc, animated: true)
         }
     }
 }
