@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        UserCoreDataManager.shared.deleteAllData("UserEntity")
+//        UserCoreDataManager.shared.deleteAllData("UserEntity")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var vc = UIViewController()
         if UserCoreDataManager.shared.isRegistered()

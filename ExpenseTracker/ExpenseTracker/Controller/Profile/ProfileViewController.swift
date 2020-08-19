@@ -14,6 +14,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var totalBalanceView: UIView!
     @IBOutlet weak var expenseView: UIView!
     
+    
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var surnameLabel: UILabel!
     @IBOutlet weak var incomeView: UIView!
@@ -26,12 +27,12 @@ class ProfileViewController: UIViewController {
         
         totalBalanceView.layer.cornerRadius = 20
         totalBalanceView.clipsToBounds = true
-        
-//        expenseView.layer.cornerRadius = 20
-//        expenseView.clipsToBounds = true
-//        
-//        incomeView.layer.cornerRadius = 20
-//        incomeView.clipsToBounds = true
+
+        expenseView.layer.cornerRadius = 20
+        expenseView.clipsToBounds = true
+
+        incomeView.layer.cornerRadius = 20
+        incomeView.clipsToBounds = true
         
         loadUser()
     }

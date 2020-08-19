@@ -15,19 +15,9 @@ class UserCoreDataManager: BaseCoreDataManager
     
     func findOrCreate(user: User, _ complitionHandler: (UserEntity) -> Void)
     {
-        let fetchRequest: NSFetchRequest<UserEntity> = UserEntity.fetchRequest()
-        do{
-            let fetchResult = try UserCoreDataManager.shared.context.fetch(fetchRequest)
-            if fetchResult.count == 0
-            {
-                let userEntity =  try UserEntity.create(user: user, context: self.context)
-                saveContext()
+        do {
+            try UserEntity.create(user: user, context: self.context) { (userEntity) in
                 complitionHandler(userEntity)
-            } else
-            {
-                try UserEntity.getUser(context: self.context) { (userEntity) in
-                    complitionHandler(userEntity)
-                }
             }
         } catch
         {

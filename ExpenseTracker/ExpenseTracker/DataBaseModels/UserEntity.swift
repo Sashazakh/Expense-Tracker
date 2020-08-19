@@ -11,7 +11,7 @@ import CoreData
 
 class UserEntity: NSManagedObject
 {
-    class func create(user: User, context: NSManagedObjectContext) throws -> UserEntity
+    class func create(user: User, context: NSManagedObjectContext, _ complitionHandler: (UserEntity) -> Void) throws -> Void
     {
         let request: NSFetchRequest<UserEntity> = UserEntity.fetchRequest()
         
@@ -20,7 +20,7 @@ class UserEntity: NSManagedObject
             
             if fetchResult.count > 0
             {
-                return fetchResult[0]
+                complitionHandler(fetchResult[0])
             }
         } catch
         {
@@ -31,7 +31,7 @@ class UserEntity: NSManagedObject
         
         userEntity.convertFromUser(user: user)
         
-        return userEntity
+        complitionHandler(userEntity)
     }
     
     class func getUser(context: NSManagedObjectContext, _ complitionHandler: (UserEntity) -> Void) throws -> Void
@@ -48,8 +48,10 @@ class UserEntity: NSManagedObject
             }
             else if fetchResult.count == 0
             {
-                let userEntiry = try self.create(user: User.shared, context: context)
-                complitionHandler(userEntiry)
+                try self.create(user: User.shared, context: context) { (userEntity) in
+                    complitionHandler(userEntity)
+                }
+
             }
         } catch
         {
@@ -66,7 +68,9 @@ class UserEntity: NSManagedObject
             
             if fetchResult.count == 0
             {
-                try UserEntity.create(user: user, context: context)
+                try UserEntity.create(user: user, context: context, { (userEntity) in
+                    userEntity.convertFromUser(user: user)
+                })
             }
             else if fetchResult.count == 1
             {

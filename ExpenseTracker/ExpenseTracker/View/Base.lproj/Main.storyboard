@@ -138,156 +138,180 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8g-7l-22x">
-                                <rect key="frame" x="143" y="84" width="128.5" height="23"/>
-                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="23"/>
-                                <color key="textColor" red="0.73824226859999997" green="0.49682724480000001" blue="0.4943165779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="HX0-oV-irE">
-                                <rect key="frame" x="20" y="127" width="374" height="318"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="riy-3H-632">
+                                <rect key="frame" x="20" y="84" width="374" height="418"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSo-6p-SFP" customClass="UserView" customModule="ExpenseTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="baB-K5-qML">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="253"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reR-Md-6TL">
-                                                <rect key="frame" x="10" y="40" width="59" height="19"/>
-                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
-                                                <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8g-7l-22x">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="23"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="23"/>
+                                                <color key="textColor" red="0.73824226859999997" green="0.49682724480000001" blue="0.4943165779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Surname:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjX-Vr-ozv">
-                                                <rect key="frame" x="10" y="89.5" width="85.5" height="19"/>
-                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
-                                                <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qL-6f-ff5">
-                                                <rect key="frame" x="104" y="89.5" width="262" height="19"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qnv-Qo-d2e" customClass="UserView" customModule="ExpenseTracker" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="40" width="374" height="98"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IW-iZ-CG4">
+                                                        <rect key="frame" x="8" y="20" width="59" height="19"/>
+                                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
+                                                        <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Surname:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktR-dZ-gcs">
+                                                        <rect key="frame" x="8" y="59" width="85.5" height="19"/>
+                                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
+                                                        <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBx-bV-7wk">
+                                                        <rect key="frame" x="75" y="20" width="291" height="19"/>
+                                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
+                                                        <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztf-Nr-1xQ">
+                                                        <rect key="frame" x="101.5" y="59" width="264.5" height="19"/>
+                                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
+                                                        <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.73824226859999997" green="0.49682724480000001" blue="0.4943165779" alpha="0.30388484589999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="262" id="dZp-2Y-UnQ"/>
+                                                    <constraint firstAttribute="height" constant="98" id="4OX-or-nvw"/>
+                                                    <constraint firstItem="2IW-iZ-CG4" firstAttribute="top" secondItem="Qnv-Qo-d2e" secondAttribute="top" constant="20" id="B0d-YR-PdL"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bBx-bV-7wk" secondAttribute="trailing" constant="8" id="CaH-eT-ct7"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ztf-Nr-1xQ" secondAttribute="trailing" constant="8" id="EIJ-7t-tzj"/>
+                                                    <constraint firstItem="bBx-bV-7wk" firstAttribute="top" secondItem="Qnv-Qo-d2e" secondAttribute="top" constant="20" id="Q1L-bl-51f"/>
+                                                    <constraint firstItem="2IW-iZ-CG4" firstAttribute="leading" secondItem="Qnv-Qo-d2e" secondAttribute="leading" constant="8" id="b4g-Bd-TNd"/>
+                                                    <constraint firstItem="ktR-dZ-gcs" firstAttribute="leading" secondItem="Qnv-Qo-d2e" secondAttribute="leading" constant="8" id="cP3-fn-Bup"/>
+                                                    <constraint firstItem="ktR-dZ-gcs" firstAttribute="top" secondItem="2IW-iZ-CG4" secondAttribute="bottom" constant="20" id="nnF-kl-mm4"/>
+                                                    <constraint firstItem="ztf-Nr-1xQ" firstAttribute="top" secondItem="bBx-bV-7wk" secondAttribute="bottom" constant="20" id="tbr-jD-jej"/>
+                                                    <constraint firstItem="ztf-Nr-1xQ" firstAttribute="leading" secondItem="ktR-dZ-gcs" secondAttribute="trailing" constant="8" id="wda-Bm-kUV"/>
+                                                    <constraint firstItem="bBx-bV-7wk" firstAttribute="leading" secondItem="2IW-iZ-CG4" secondAttribute="trailing" constant="8" id="xBS-t1-xT7"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
-                                                <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbG-Fw-FZD">
-                                                <rect key="frame" x="77" y="40" width="289" height="19"/>
-                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
-                                                <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MdG-72-uTc">
+                                                <rect key="frame" x="0.0" y="155" width="374" height="98"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7a-cx-76N">
+                                                        <rect key="frame" x="119.5" y="8" width="135" height="21"/>
+                                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="21"/>
+                                                        <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sp-4a-H35">
+                                                        <rect key="frame" x="162.5" y="49" width="49" height="19"/>
+                                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
+                                                        <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.30404015882050084" green="0.53589868301786869" blue="1" alpha="0.45477311647808216" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="98" id="Cau-42-8i3"/>
+                                                    <constraint firstItem="2sp-4a-H35" firstAttribute="top" secondItem="H7a-cx-76N" secondAttribute="bottom" constant="20" id="ENC-pR-665"/>
+                                                    <constraint firstItem="H7a-cx-76N" firstAttribute="centerX" secondItem="MdG-72-uTc" secondAttribute="centerX" id="LV4-tD-s0m"/>
+                                                    <constraint firstAttribute="height" constant="98" id="bhL-1U-5LE"/>
+                                                    <constraint firstItem="H7a-cx-76N" firstAttribute="top" secondItem="MdG-72-uTc" secondAttribute="top" constant="8" id="hFt-SR-VhD"/>
+                                                    <constraint firstItem="2sp-4a-H35" firstAttribute="centerX" secondItem="MdG-72-uTc" secondAttribute="centerX" id="nQW-Eu-fnO"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.73824226859999997" green="0.49682724480000001" blue="0.4943165779" alpha="0.30388484589999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="reR-Md-6TL" firstAttribute="top" secondItem="GSo-6p-SFP" secondAttribute="top" constant="40" id="08L-iy-c4C"/>
-                                            <constraint firstItem="CjX-Vr-ozv" firstAttribute="leading" secondItem="GSo-6p-SFP" secondAttribute="leading" constant="10" id="2jC-jb-iGc"/>
-                                            <constraint firstItem="2qL-6f-ff5" firstAttribute="top" secondItem="mbG-Fw-FZD" secondAttribute="bottom" constant="30.5" id="Du6-m2-gIl"/>
-                                            <constraint firstItem="reR-Md-6TL" firstAttribute="leading" secondItem="GSo-6p-SFP" secondAttribute="leading" constant="10" id="FT2-uL-cU4"/>
-                                            <constraint firstItem="CjX-Vr-ozv" firstAttribute="top" secondItem="mbG-Fw-FZD" secondAttribute="bottom" constant="30.5" id="HHL-ws-1f1"/>
-                                            <constraint firstAttribute="trailing" secondItem="mbG-Fw-FZD" secondAttribute="trailing" constant="8" id="QKd-gV-eDG"/>
-                                            <constraint firstItem="mbG-Fw-FZD" firstAttribute="top" secondItem="GSo-6p-SFP" secondAttribute="top" constant="40" id="eGz-ng-oMI"/>
-                                            <constraint firstItem="mbG-Fw-FZD" firstAttribute="leading" secondItem="reR-Md-6TL" secondAttribute="trailing" constant="8" id="j3M-4z-pUc"/>
-                                            <constraint firstItem="2qL-6f-ff5" firstAttribute="leading" secondItem="CjX-Vr-ozv" secondAttribute="trailing" constant="8.5" id="k9V-J5-fex"/>
-                                            <constraint firstAttribute="height" constant="150" id="nKG-re-kO7"/>
+                                            <constraint firstItem="Qnv-Qo-d2e" firstAttribute="leading" secondItem="baB-K5-qML" secondAttribute="leading" id="JEz-dT-Txl"/>
+                                            <constraint firstItem="MdG-72-uTc" firstAttribute="leading" secondItem="baB-K5-qML" secondAttribute="leading" id="MjN-i4-u14"/>
+                                            <constraint firstAttribute="trailing" secondItem="Qnv-Qo-d2e" secondAttribute="trailing" id="Qxz-Uf-IJu"/>
+                                            <constraint firstItem="d8g-7l-22x" firstAttribute="centerX" secondItem="baB-K5-qML" secondAttribute="centerX" id="fAs-ho-IBZ"/>
+                                            <constraint firstItem="d8g-7l-22x" firstAttribute="top" secondItem="baB-K5-qML" secondAttribute="top" id="mtj-YE-L3g"/>
+                                            <constraint firstAttribute="trailing" secondItem="MdG-72-uTc" secondAttribute="trailing" id="r13-i4-wHu"/>
                                         </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKd-Ae-SFE">
-                                        <rect key="frame" x="0.0" y="190" width="374" height="128"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="oXM-Dh-17f">
+                                        <rect key="frame" x="0.0" y="290" width="374" height="128"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WK8-lR-P9V">
-                                                <rect key="frame" x="126" y="8" width="122.5" height="19"/>
-                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
-                                                <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZoW-Nt-U6H">
+                                                <rect key="frame" x="0.0" y="0.0" width="155" height="128"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expense" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuQ-rc-wpf">
+                                                        <rect key="frame" x="36.5" y="8" width="82" height="21"/>
+                                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="21"/>
+                                                        <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvk-Ce-qPL">
+                                                        <rect key="frame" x="55.5" y="55.5" width="44" height="17"/>
+                                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                                        <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.72880314089999998" green="0.20385420839999999" blue="0.092165118209999994" alpha="0.84733518839999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="cvk-Ce-qPL" firstAttribute="centerX" secondItem="ZoW-Nt-U6H" secondAttribute="centerX" id="c0f-1e-VMH"/>
+                                                    <constraint firstItem="EuQ-rc-wpf" firstAttribute="centerX" secondItem="ZoW-Nt-U6H" secondAttribute="centerX" id="hfU-Sc-Msi"/>
+                                                    <constraint firstItem="cvk-Ce-qPL" firstAttribute="centerY" secondItem="ZoW-Nt-U6H" secondAttribute="centerY" id="kdB-T3-6Uf"/>
+                                                    <constraint firstItem="EuQ-rc-wpf" firstAttribute="top" secondItem="ZoW-Nt-U6H" secondAttribute="top" constant="8" id="wcb-bV-DB5"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WVv-hO-hDj">
+                                                <rect key="frame" x="219" y="0.0" width="155" height="128"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Income" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ZA-wL-3Om">
+                                                        <rect key="frame" x="40.5" y="8" width="74" height="21"/>
+                                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="21"/>
+                                                        <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="InI-qs-q8Y">
+                                                        <rect key="frame" x="55.5" y="55.5" width="44" height="17"/>
+                                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                                        <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="0.58302119009999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="3ZA-wL-3Om" firstAttribute="centerX" secondItem="WVv-hO-hDj" secondAttribute="centerX" id="2dd-RM-WM6"/>
+                                                    <constraint firstItem="3ZA-wL-3Om" firstAttribute="top" secondItem="WVv-hO-hDj" secondAttribute="top" constant="8" id="Cti-A8-T5t"/>
+                                                    <constraint firstItem="InI-qs-q8Y" firstAttribute="centerX" secondItem="WVv-hO-hDj" secondAttribute="centerX" id="h6w-ke-IYj"/>
+                                                    <constraint firstItem="InI-qs-q8Y" firstAttribute="centerY" secondItem="WVv-hO-hDj" secondAttribute="centerY" id="yiZ-4M-SCY"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.25960286459999998" green="0.27560763890000001" blue="1" alpha="0.56235552226027397" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="WK8-lR-P9V" firstAttribute="centerX" secondItem="sKd-Ae-SFE" secondAttribute="centerX" id="2Kn-bK-pMM"/>
-                                            <constraint firstItem="WK8-lR-P9V" firstAttribute="top" secondItem="sKd-Ae-SFE" secondAttribute="top" constant="8" id="8gi-15-NkJ"/>
-                                            <constraint firstAttribute="height" constant="128" id="ZBd-uL-zU1"/>
+                                            <constraint firstItem="ZoW-Nt-U6H" firstAttribute="top" secondItem="oXM-Dh-17f" secondAttribute="top" id="46q-7C-kfm"/>
+                                            <constraint firstItem="WVv-hO-hDj" firstAttribute="top" secondItem="oXM-Dh-17f" secondAttribute="top" id="LQM-bu-ZeD"/>
+                                            <constraint firstAttribute="bottom" secondItem="WVv-hO-hDj" secondAttribute="bottom" id="ZJl-ea-Jgg"/>
+                                            <constraint firstItem="ZoW-Nt-U6H" firstAttribute="leading" secondItem="oXM-Dh-17f" secondAttribute="leading" id="fJH-l3-idc"/>
+                                            <constraint firstAttribute="trailing" secondItem="WVv-hO-hDj" secondAttribute="trailing" id="lOk-vq-J88"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZoW-Nt-U6H" secondAttribute="bottom" id="mZy-g9-kAo"/>
                                         </constraints>
-                                    </view>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="sKd-Ae-SFE" firstAttribute="leading" secondItem="HX0-oV-irE" secondAttribute="leading" id="PAd-8l-bfT"/>
-                                    <constraint firstAttribute="trailing" secondItem="sKd-Ae-SFE" secondAttribute="trailing" id="WPI-zV-aBx"/>
-                                    <constraint firstAttribute="trailing" secondItem="GSo-6p-SFP" secondAttribute="trailing" id="XtE-l2-Sik"/>
-                                    <constraint firstAttribute="bottom" secondItem="sKd-Ae-SFE" secondAttribute="bottom" id="fNk-0W-fyr"/>
-                                    <constraint firstItem="GSo-6p-SFP" firstAttribute="leading" secondItem="HX0-oV-irE" secondAttribute="leading" id="hVA-Gt-dQx"/>
-                                    <constraint firstItem="GSo-6p-SFP" firstAttribute="top" secondItem="HX0-oV-irE" secondAttribute="top" id="yp1-X2-HHK"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="92" translatesAutoresizingMaskIntoConstraints="NO" id="iT5-sZ-8F4">
-                                <rect key="frame" x="20" y="480" width="374" height="128"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzp-aq-nVH">
-                                        <rect key="frame" x="0.0" y="0.0" width="141" height="128"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Income" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ct-3h-64t">
-                                                <rect key="frame" x="42.5" y="8" width="56.5" height="16"/>
-                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
-                                                <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="0.58302119006849318" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="5Ct-3h-64t" firstAttribute="top" secondItem="zzp-aq-nVH" secondAttribute="top" constant="8" id="8TW-55-QpG"/>
-                                            <constraint firstItem="5Ct-3h-64t" firstAttribute="centerX" secondItem="zzp-aq-nVH" secondAttribute="centerX" id="YOu-8Y-FjD"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIQ-gp-keh">
-                                        <rect key="frame" x="233" y="0.0" width="141" height="128"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expense" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qk1-j4-NXV">
-                                                <rect key="frame" x="39.5" y="8" width="62.5" height="16"/>
-                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
-                                                <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.72880314086294418" green="0.20385420843965221" blue="0.092165118205912902" alpha="0.84733518835616439" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="Qk1-j4-NXV" firstAttribute="centerX" secondItem="mIQ-gp-keh" secondAttribute="centerX" id="oYp-9X-xMb"/>
-                                            <constraint firstItem="Qk1-j4-NXV" firstAttribute="top" secondItem="mIQ-gp-keh" secondAttribute="top" constant="8" id="xmJ-RD-Da6"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="zzp-aq-nVH" secondAttribute="bottom" id="G30-Yr-HaR"/>
-                                    <constraint firstItem="mIQ-gp-keh" firstAttribute="leading" secondItem="iT5-sZ-8F4" secondAttribute="leading" constant="233" id="NMB-6c-M3T"/>
-                                    <constraint firstItem="mIQ-gp-keh" firstAttribute="top" secondItem="iT5-sZ-8F4" secondAttribute="top" id="OTj-pR-g0F"/>
-                                    <constraint firstAttribute="trailing" secondItem="mIQ-gp-keh" secondAttribute="trailing" id="R4d-Kv-kyo"/>
-                                    <constraint firstAttribute="bottom" secondItem="mIQ-gp-keh" secondAttribute="bottom" id="RPY-pM-IfU"/>
-                                    <constraint firstItem="zzp-aq-nVH" firstAttribute="leading" secondItem="iT5-sZ-8F4" secondAttribute="leading" id="e1X-Aj-GOr"/>
-                                    <constraint firstItem="zzp-aq-nVH" firstAttribute="top" secondItem="iT5-sZ-8F4" secondAttribute="top" id="fV1-rU-ZWP"/>
+                                    <constraint firstAttribute="height" constant="418" id="9wb-Pl-gXA"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.1253264248" green="0.12920945880000001" blue="0.14165943859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="LZn-J0-C3z" firstAttribute="trailing" secondItem="HX0-oV-irE" secondAttribute="trailing" constant="20" id="65c-gW-67D"/>
-                            <constraint firstItem="LZn-J0-C3z" firstAttribute="trailing" secondItem="iT5-sZ-8F4" secondAttribute="trailing" constant="20" id="Alm-UK-q78"/>
-                            <constraint firstItem="d8g-7l-22x" firstAttribute="top" secondItem="LZn-J0-C3z" secondAttribute="top" constant="40" id="NBC-f9-qIq"/>
-                            <constraint firstItem="iT5-sZ-8F4" firstAttribute="leading" secondItem="LZn-J0-C3z" secondAttribute="leading" constant="20" id="R3k-me-Igc"/>
-                            <constraint firstItem="HX0-oV-irE" firstAttribute="leading" secondItem="LZn-J0-C3z" secondAttribute="leading" constant="20" id="W9L-sT-kXE"/>
-                            <constraint firstItem="HX0-oV-irE" firstAttribute="top" secondItem="d8g-7l-22x" secondAttribute="bottom" constant="20" id="ZLK-Ah-WBS"/>
-                            <constraint firstItem="iT5-sZ-8F4" firstAttribute="top" secondItem="HX0-oV-irE" secondAttribute="bottom" constant="35" id="oKM-Hl-2QG"/>
-                            <constraint firstItem="LZn-J0-C3z" firstAttribute="bottom" secondItem="iT5-sZ-8F4" secondAttribute="bottom" constant="205" id="qAJ-9C-9tF"/>
-                            <constraint firstItem="d8g-7l-22x" firstAttribute="centerX" secondItem="KpS-3U-PL5" secondAttribute="centerX" id="wYc-5S-jFM"/>
+                            <constraint firstItem="riy-3H-632" firstAttribute="top" secondItem="LZn-J0-C3z" secondAttribute="top" constant="40" id="OqH-oh-euI"/>
+                            <constraint firstItem="riy-3H-632" firstAttribute="leading" secondItem="LZn-J0-C3z" secondAttribute="leading" constant="20" id="SXi-S9-Ce7"/>
+                            <constraint firstItem="LZn-J0-C3z" firstAttribute="trailing" secondItem="riy-3H-632" secondAttribute="trailing" constant="20" id="xg3-fu-kcI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LZn-J0-C3z"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="hIM-Gj-HU6"/>
                     <connections>
-                        <outlet property="expenseView" destination="mIQ-gp-keh" id="DFb-D5-G9E"/>
-                        <outlet property="incomeView" destination="zzp-aq-nVH" id="QOb-5c-16d"/>
-                        <outlet property="mainView" destination="GSo-6p-SFP" id="ehl-We-Sf9"/>
-                        <outlet property="surnameLabel" destination="CjX-Vr-ozv" id="fdU-wB-z8d"/>
-                        <outlet property="totalBalanceView" destination="sKd-Ae-SFE" id="QAS-RI-DIx"/>
-                        <outlet property="userNameLabel" destination="reR-Md-6TL" id="WbT-v8-roe"/>
+                        <outlet property="expenseView" destination="ZoW-Nt-U6H" id="uKg-xz-B70"/>
+                        <outlet property="incomeView" destination="WVv-hO-hDj" id="px8-WW-fQV"/>
+                        <outlet property="mainView" destination="Qnv-Qo-d2e" id="euE-av-AGJ"/>
+                        <outlet property="surnameLabel" destination="ztf-Nr-1xQ" id="yYa-oF-c28"/>
+                        <outlet property="totalBalanceView" destination="MdG-72-uTc" id="xvT-YV-Mac"/>
+                        <outlet property="userNameLabel" destination="bBx-bV-7wk" id="5PF-Bt-qIH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YJP-Wr-h73" userLabel="First Responder" sceneMemberID="firstResponder"/>
