@@ -19,6 +19,7 @@ class UserCoreDataManager: BaseCoreDataManager
             try UserEntity.create(user: user, context: self.context) { (userEntity) in
                 complitionHandler(userEntity)
             }
+            saveContext()
         } catch
         {
             fatalError("Unresolved error \(error)")
@@ -31,7 +32,6 @@ class UserCoreDataManager: BaseCoreDataManager
         let fetchRequest: NSFetchRequest<UserEntity> = UserEntity.fetchRequest()
         do{
             let fetchResult = try persistentContainer.viewContext.fetch(fetchRequest)
-
             if fetchResult.count == 0
             {
                 return false

@@ -21,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var vc = UIViewController()
         if UserCoreDataManager.shared.isRegistered()
         {
+            UserCoreDataManager.shared.findOrCreate(user: User.shared) { (userEntity) in
+                User.shared.convertEntity(entity: userEntity)
+            }
             vc = storyboard.instantiateViewController(withIdentifier: "mainTabBarVc")
         } else
         {

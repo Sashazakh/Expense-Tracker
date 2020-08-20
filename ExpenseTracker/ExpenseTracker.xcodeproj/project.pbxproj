@@ -13,10 +13,9 @@
 		D62E353624E7EDD8004F4C3A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62E353524E7EDD8004F4C3A /* TabBarController.swift */; };
 		D62E353924E7FBEE004F4C3A /* MainBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62E353824E7FBEE004F4C3A /* MainBar.swift */; };
 		D62E353C24E83234004F4C3A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62E353B24E83234004F4C3A /* ProfileViewController.swift */; };
-		D62E354124E86539004F4C3A /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62E354024E86539004F4C3A /* UserView.swift */; };
-		D62E354324E86546004F4C3A /* CashFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62E354224E86546004F4C3A /* CashFlowView.swift */; };
 		D66F1FE524E6A8C300C35C8C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66F1FE424E6A8C300C35C8C /* RegisterViewController.swift */; };
 		D66F1FE924E6B9DD00C35C8C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66F1FE824E6B9DD00C35C8C /* User.swift */; };
+		D67B2BAF24EE69C0005D1E09 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67B2BAE24EE69C0005D1E09 /* AddTransactionViewController.swift */; };
 		D6BB252C24E5B94300E814C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB252B24E5B94300E814C8 /* AppDelegate.swift */; };
 		D6BB253124E5B94300E814C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BB252F24E5B94300E814C8 /* Main.storyboard */; };
 		D6BB253424E5B94300E814C8 /* ExpenseTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6BB253224E5B94300E814C8 /* ExpenseTracker.xcdatamodeld */; };
@@ -31,10 +30,9 @@
 		D62E353524E7EDD8004F4C3A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D62E353824E7FBEE004F4C3A /* MainBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBar.swift; sourceTree = "<group>"; };
 		D62E353B24E83234004F4C3A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		D62E354024E86539004F4C3A /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
-		D62E354224E86546004F4C3A /* CashFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashFlowView.swift; sourceTree = "<group>"; };
 		D66F1FE424E6A8C300C35C8C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D66F1FE824E6B9DD00C35C8C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D67B2BAE24EE69C0005D1E09 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
 		D6BB252824E5B94300E814C8 /* ExpenseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BB252B24E5B94300E814C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6BB253024E5B94300E814C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,8 +83,6 @@
 		D62E353A24E83215004F4C3A /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				D62E353F24E86512004F4C3A /* CashFlowView */,
-				D62E353E24E86506004F4C3A /* UserView */,
 				D62E353B24E83234004F4C3A /* ProfileViewController.swift */,
 			);
 			path = Profile;
@@ -98,22 +94,6 @@
 				D66F1FE424E6A8C300C35C8C /* RegisterViewController.swift */,
 			);
 			path = Registration;
-			sourceTree = "<group>";
-		};
-		D62E353E24E86506004F4C3A /* UserView */ = {
-			isa = PBXGroup;
-			children = (
-				D62E354024E86539004F4C3A /* UserView.swift */,
-			);
-			path = UserView;
-			sourceTree = "<group>";
-		};
-		D62E353F24E86512004F4C3A /* CashFlowView */ = {
-			isa = PBXGroup;
-			children = (
-				D62E354224E86546004F4C3A /* CashFlowView.swift */,
-			);
-			path = CashFlowView;
 			sourceTree = "<group>";
 		};
 		D66F1FE624E6A8CD00C35C8C /* HelpFiles */ = {
@@ -130,6 +110,14 @@
 				D66F1FE824E6B9DD00C35C8C /* User.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		D67B2BAD24EE69A3005D1E09 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				D67B2BAE24EE69C0005D1E09 /* AddTransactionViewController.swift */,
+			);
+			path = Transactions;
 			sourceTree = "<group>";
 		};
 		D6BB251F24E5B94300E814C8 = {
@@ -183,6 +171,7 @@
 		D6BB254224E5BA0500E814C8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D67B2BAD24EE69A3005D1E09 /* Transactions */,
 				D62E353D24E8327C004F4C3A /* Registration */,
 				D62E353A24E83215004F4C3A /* Profile */,
 				D62E353724E7FBD7004F4C3A /* TabBar */,
@@ -261,14 +250,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D62E354124E86539004F4C3A /* UserView.swift in Sources */,
 				D62E353224E6CF27004F4C3A /* UserCoreDataManager.swift in Sources */,
 				D62E353924E7FBEE004F4C3A /* MainBar.swift in Sources */,
 				D62E353C24E83234004F4C3A /* ProfileViewController.swift in Sources */,
+				D67B2BAF24EE69C0005D1E09 /* AddTransactionViewController.swift in Sources */,
 				D62E353624E7EDD8004F4C3A /* TabBarController.swift in Sources */,
 				D66F1FE924E6B9DD00C35C8C /* User.swift in Sources */,
 				D66F1FE524E6A8C300C35C8C /* RegisterViewController.swift in Sources */,
-				D62E354324E86546004F4C3A /* CashFlowView.swift in Sources */,
 				D6BB253424E5B94300E814C8 /* ExpenseTracker.xcdatamodeld in Sources */,
 				D62E353424E6D19F004F4C3A /* BaseCoreDataManager.swift in Sources */,
 				D62E352F24E6CD11004F4C3A /* UserEntity.swift in Sources */,

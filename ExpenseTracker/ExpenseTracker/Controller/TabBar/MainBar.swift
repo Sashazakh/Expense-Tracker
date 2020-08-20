@@ -46,6 +46,9 @@ class MainBar: UITabBar {
     }
     
     @objc func showVc() {
-        print("VC")
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addTransactionVc")
+        let mainVc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: " mainTabBarVc")
+        
+        mainVc.present(vc, animated: true)
     }
 }
