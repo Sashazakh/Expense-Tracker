@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+
+
 class MainBar: UITabBar {
     private var middleButton = UIButton()
     
@@ -44,11 +47,9 @@ class MainBar: UITabBar {
         middleButton.addTarget(self, action: #selector(showVc), for: .touchUpInside)
         addSubview(middleButton)
     }
-    
+
     @objc func showVc() {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addTransactionVc")
-        let mainVc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: " mainTabBarVc")
-        
-        mainVc.present(vc, animated: true)
+        let middleVc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addNavigation")
+        UIApplication.topMostViewController!.present(middleVc, animated: true)
     }
 }

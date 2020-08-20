@@ -36,7 +36,7 @@ class ProfileViewController: UIViewController {
 
         incomeView.layer.cornerRadius = 20
         incomeView.clipsToBounds = true
-        
+    
         loadUser()
     }
     

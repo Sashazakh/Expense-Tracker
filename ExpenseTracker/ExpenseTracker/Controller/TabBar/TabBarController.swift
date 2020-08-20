@@ -9,12 +9,16 @@
 import UIKit
 
 class TabBarController: UITabBarController {
-
+    
+    private var middleButton = UIButton()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBar.isTranslucent = false
         self.tabBar.barTintColor = .darkGray
+
+        let profileVc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "profileVc")
+        let middleVc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addTransactionVc")
+
     }
-    
-   
 }

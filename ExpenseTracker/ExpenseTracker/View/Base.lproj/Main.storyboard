@@ -363,23 +363,109 @@
             </objects>
             <point key="canvasLocation" x="1664" y="-44"/>
         </scene>
-        <!--Add Transaction View Controller-->
-        <scene sceneID="rac-9y-gEx">
+        <!--New Payment-->
+        <scene sceneID="jiZ-Ea-f2i">
             <objects>
-                <viewController storyboardIdentifier="addTransactionVc" id="SUz-Oe-zKM" customClass="AddTransactionViewController" customModule="ExpenseTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="a32-AR-eAM">
+                <viewController storyboardIdentifier="addTransactionVc" id="i0d-3Z-apT" customClass="AddTransactionViewController" customModule="ExpenseTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Taf-UR-g6r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="57a-zO-oHC">
+                                <rect key="frame" x="25" y="108" width="364" height="734"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="t0B-Ha-tjz">
+                                        <rect key="frame" x="18" y="0.0" width="44.5" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgS-QB-JrY">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="21"/>
+                                                <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wep-hR-054">
+                                                <rect key="frame" x="0.0" y="29" width="25" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0WG-La-ofv">
+                                        <rect key="frame" x="18" y="92" width="46" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZI-oR-dOj">
+                                                <rect key="frame" x="0.0" y="0.0" width="46" height="21"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="21"/>
+                                                <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bk6-mT-Qc2">
+                                                <rect key="frame" x="0.0" y="29" width="25" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.30051027790543994" green="0.30051027790543994" blue="0.30051027790543994" alpha="0.8338238441780822" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.1253264248" green="0.12920945880000001" blue="0.14165943859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="buY-4h-SBU"/>
+                        <constraints>
+                            <constraint firstItem="57a-zO-oHC" firstAttribute="leading" secondItem="kXC-Di-e5H" secondAttribute="leading" constant="25" id="M4Z-nQ-cAl"/>
+                            <constraint firstItem="57a-zO-oHC" firstAttribute="top" secondItem="kXC-Di-e5H" secondAttribute="top" constant="20" id="OPr-KR-zD6"/>
+                            <constraint firstItem="kXC-Di-e5H" firstAttribute="bottom" secondItem="57a-zO-oHC" secondAttribute="bottom" constant="20" id="RuL-74-95h"/>
+                            <constraint firstItem="kXC-Di-e5H" firstAttribute="trailing" secondItem="57a-zO-oHC" secondAttribute="trailing" constant="25" id="jTc-Bh-sdV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kXC-Di-e5H"/>
                     </view>
+                    <navigationItem key="navigationItem" title="New Payment" id="ctd-cM-3GY">
+                        <barButtonItem key="rightBarButtonItem" image="cancelIcon" id="Sko-uo-m6I">
+                            <color key="tintColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="cancelAction:" destination="i0d-3Z-apT" id="g08-Ys-cX2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="contentView" destination="57a-zO-oHC" id="o8Q-Ya-ipB"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kk7-z8-gvn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nf3-8R-6kf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2910" y="129"/>
+            <point key="canvasLocation" x="3923.188405797102" y="-24.107142857142858"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dq0-3O-7Bo">
+            <objects>
+                <navigationController storyboardIdentifier="addNavigation" automaticallyAdjustsScrollViewInsets="NO" id="IhG-VR-Yfc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kdV-N4-F9e">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.1253264248" green="0.12920945880000001" blue="0.14165943859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.16839178171254654" green="0.16839178171254654" blue="0.16839178171254654" alpha="0.65287885273972601" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="24"/>
+                            <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="i0d-3Z-apT" kind="relationship" relationship="rootViewController" id="f6v-dA-tEy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e2S-Sp-voS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3013.04347826087" y="-24.107142857142858"/>
         </scene>
     </scenes>
     <resources>
         <image name="Profile" width="30" height="30"/>
+        <image name="cancelIcon" width="30" height="30"/>
     </resources>
 </document>

@@ -10,7 +10,16 @@ import UIKit
 
 class AddTransactionViewController: UIViewController {
 
+    @IBOutlet weak var contentView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        contentView.layer.cornerRadius = 15
+        contentView.clipsToBounds = true
+    }
+   
+    @IBAction func cancelAction(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true)
     }
 }
