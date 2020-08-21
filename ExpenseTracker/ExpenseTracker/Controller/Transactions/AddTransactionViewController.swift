@@ -83,7 +83,33 @@ class AddTransactionViewController: UIViewController, UITextFieldDelegate {
         self.dismiss(animated: true)
     }
     @IBAction func okAction(_ sender: Any) {
-        self.dismiss(animated: true)
+        if checkFields()
+        {
+            self.dismiss(animated: true)
+        }
+    }
+    
+    func checkFields() -> Bool
+    {
+        var result: Bool = true
+        if titleTF.text == ""
+        {
+            let alert: AddTransactionAlert = .fillTtile
+            AlertManager.addTransactionAlert(alert: alert)
+            result = false
+        } else if dateTF.text == ""
+        {
+            let alert: AddTransactionAlert = .fillDate
+            AlertManager.addTransactionAlert(alert: alert)
+            result = false
+        } else if amountTF.text == ""
+        {
+            let alert: AddTransactionAlert = .fillAmount
+            AlertManager.addTransactionAlert(alert: alert)
+            result = false
+        }
+        print(result)
+        return result
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

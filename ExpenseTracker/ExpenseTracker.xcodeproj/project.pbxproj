@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D61F3DF924EF9FB20038ED73 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61F3DF824EF9FB20038ED73 /* Transaction.swift */; };
+		D61F3DFE24EFB4B70038ED73 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61F3DFD24EFB4B70038ED73 /* AlertManager.swift */; };
 		D62E352F24E6CD11004F4C3A /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62E352E24E6CD11004F4C3A /* UserEntity.swift */; };
 		D62E353224E6CF27004F4C3A /* UserCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62E353124E6CF27004F4C3A /* UserCoreDataManager.swift */; };
 		D62E353424E6D19F004F4C3A /* BaseCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62E353324E6D19F004F4C3A /* BaseCoreDataManager.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		D61F3DF824EF9FB20038ED73 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		D61F3DFD24EFB4B70038ED73 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		D62E352E24E6CD11004F4C3A /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		D62E353124E6CF27004F4C3A /* UserCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoreDataManager.swift; sourceTree = "<group>"; };
 		D62E353324E6D19F004F4C3A /* BaseCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoreDataManager.swift; sourceTree = "<group>"; };
@@ -63,6 +65,23 @@
 			path = Transaction;
 			sourceTree = "<group>";
 		};
+		D61F3DFB24EFB49C0038ED73 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D62E353324E6D19F004F4C3A /* BaseCoreDataManager.swift */,
+				D62E353124E6CF27004F4C3A /* UserCoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		D61F3DFC24EFB4A80038ED73 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				D61F3DFD24EFB4B70038ED73 /* AlertManager.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		D62E352D24E6CD01004F4C3A /* DataBaseModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,8 +94,8 @@
 		D62E353024E6CF10004F4C3A /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				D62E353124E6CF27004F4C3A /* UserCoreDataManager.swift */,
-				D62E353324E6D19F004F4C3A /* BaseCoreDataManager.swift */,
+				D61F3DFC24EFB4A80038ED73 /* Alert */,
+				D61F3DFB24EFB49C0038ED73 /* CoreData */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -266,6 +285,7 @@
 				D61F3DF924EF9FB20038ED73 /* Transaction.swift in Sources */,
 				D62E353C24E83234004F4C3A /* ProfileViewController.swift in Sources */,
 				D67B2BAF24EE69C0005D1E09 /* AddTransactionViewController.swift in Sources */,
+				D61F3DFE24EFB4B70038ED73 /* AlertManager.swift in Sources */,
 				D62E353624E7EDD8004F4C3A /* TabBarController.swift in Sources */,
 				D66F1FE924E6B9DD00C35C8C /* User.swift in Sources */,
 				D66F1FE524E6A8C300C35C8C /* RegisterViewController.swift in Sources */,
