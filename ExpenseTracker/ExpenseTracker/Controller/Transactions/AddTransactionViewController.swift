@@ -10,6 +10,8 @@ import UIKit
 
 class AddTransactionViewController: UIViewController, UITextFieldDelegate {
 
+    var currentTransaction: TypeTransaction = .income
+    
     @IBOutlet weak var contentView: UIView!
     
     @IBOutlet weak var expenseView: UIView!
@@ -59,6 +61,7 @@ class AddTransactionViewController: UIViewController, UITextFieldDelegate {
         let tapScreen = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
         view.addGestureRecognizer(tapScreen)
         
+         incomeView.backgroundColor = #colorLiteral(red: 0, green: 0.3921568627, blue: 0, alpha: 0.6977739726)
     }
    
     
@@ -86,5 +89,17 @@ class AddTransactionViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
+    }
+    
+    
+    @IBAction func expenseAction(_ sender: Any) {
+        currentTransaction = .expense
+        expenseView.backgroundColor = #colorLiteral(red: 0.5450980392, green: 0, blue: 0, alpha: 0.6986836473)
+        incomeView.backgroundColor = #colorLiteral(red: 0.3678154181, green: 0.3678154181, blue: 0.3678154181, alpha: 1)
+    }
+    @IBAction func incomeAction(_ sender: Any) {
+        currentTransaction = .income
+        incomeView.backgroundColor = #colorLiteral(red: 0, green: 0.3921568627, blue: 0, alpha: 0.6977739726)
+        expenseView.backgroundColor = #colorLiteral(red: 0.3678154181, green: 0.3678154181, blue: 0.3678154181, alpha: 1)
     }
 }

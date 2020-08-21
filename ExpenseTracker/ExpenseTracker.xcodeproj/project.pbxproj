@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D61F3DF924EF9FB20038ED73 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61F3DF824EF9FB20038ED73 /* Transaction.swift */; };
 		D62E352F24E6CD11004F4C3A /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62E352E24E6CD11004F4C3A /* UserEntity.swift */; };
 		D62E353224E6CF27004F4C3A /* UserCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62E353124E6CF27004F4C3A /* UserCoreDataManager.swift */; };
 		D62E353424E6D19F004F4C3A /* BaseCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62E353324E6D19F004F4C3A /* BaseCoreDataManager.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D61F3DF824EF9FB20038ED73 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		D62E352E24E6CD11004F4C3A /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		D62E353124E6CF27004F4C3A /* UserCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoreDataManager.swift; sourceTree = "<group>"; };
 		D62E353324E6D19F004F4C3A /* BaseCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoreDataManager.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D61F3DFA24EF9FB70038ED73 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				D61F3DF824EF9FB20038ED73 /* Transaction.swift */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
 		D62E352D24E6CD01004F4C3A /* DataBaseModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +164,7 @@
 		D6BB254024E5B9EC00E814C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D61F3DFA24EF9FB70038ED73 /* Transaction */,
 				D66F1FE724E6B9D100C35C8C /* User */,
 			);
 			path = Model;
@@ -252,6 +263,7 @@
 			files = (
 				D62E353224E6CF27004F4C3A /* UserCoreDataManager.swift in Sources */,
 				D62E353924E7FBEE004F4C3A /* MainBar.swift in Sources */,
+				D61F3DF924EF9FB20038ED73 /* Transaction.swift in Sources */,
 				D62E353C24E83234004F4C3A /* ProfileViewController.swift in Sources */,
 				D67B2BAF24EE69C0005D1E09 /* AddTransactionViewController.swift in Sources */,
 				D62E353624E7EDD8004F4C3A /* TabBarController.swift in Sources */,

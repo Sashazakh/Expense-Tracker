@@ -441,53 +441,76 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="83" translatesAutoresizingMaskIntoConstraints="NO" id="dca-j8-QNa">
-                                                <rect key="frame" x="0.0" y="267" width="334" height="128"/>
+                                                <rect key="frame" x="0.0" y="267" width="334" height="128.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UYf-2l-ibJ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="125.5" height="128"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="125.5" height="128.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expense" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWI-5U-QRK">
-                                                                <rect key="frame" x="25.5" y="54.5" width="74.5" height="19"/>
+                                                                <rect key="frame" x="25.5" y="55" width="74.5" height="19"/>
                                                                 <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
                                                                 <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Nf-YH-qLN">
+                                                                <rect key="frame" x="0.0" y="0.0" width="125.5" height="128.5"/>
+                                                                <connections>
+                                                                    <action selector="expenseAction:" destination="i0d-3Z-apT" eventType="touchUpInside" id="iDT-v5-GLA"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.3678154181405372" green="0.3678154181405372" blue="0.3678154181405372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
+                                                            <constraint firstItem="3Nf-YH-qLN" firstAttribute="width" secondItem="UYf-2l-ibJ" secondAttribute="height" multiplier="125:128" id="1jx-Lq-xbB"/>
+                                                            <constraint firstItem="3Nf-YH-qLN" firstAttribute="height" secondItem="UYf-2l-ibJ" secondAttribute="height" id="8N1-Mb-Egw"/>
+                                                            <constraint firstItem="3Nf-YH-qLN" firstAttribute="centerX" secondItem="UYf-2l-ibJ" secondAttribute="centerX" id="AMN-ea-y3X"/>
                                                             <constraint firstItem="sWI-5U-QRK" firstAttribute="centerX" secondItem="UYf-2l-ibJ" secondAttribute="centerX" id="Ejs-6P-vun"/>
+                                                            <constraint firstItem="3Nf-YH-qLN" firstAttribute="width" secondItem="UYf-2l-ibJ" secondAttribute="width" id="Kck-hd-rMm"/>
                                                             <constraint firstItem="sWI-5U-QRK" firstAttribute="centerY" secondItem="UYf-2l-ibJ" secondAttribute="centerY" id="TAX-To-pP6"/>
+                                                            <constraint firstItem="3Nf-YH-qLN" firstAttribute="centerY" secondItem="UYf-2l-ibJ" secondAttribute="centerY" id="l1e-g8-qsd"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gf-tK-WtB">
-                                                        <rect key="frame" x="208.5" y="0.0" width="125.5" height="128"/>
+                                                        <rect key="frame" x="208.5" y="0.0" width="125.5" height="128.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Income" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAW-CI-TLF">
-                                                                <rect key="frame" x="29.5" y="54.5" width="67" height="19"/>
+                                                                <rect key="frame" x="29.5" y="55" width="67" height="19"/>
                                                                 <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="19"/>
                                                                 <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNm-A4-O2E">
+                                                                <rect key="frame" x="0.0" y="0.0" width="125.5" height="128.5"/>
+                                                                <connections>
+                                                                    <action selector="incomeAction:" destination="i0d-3Z-apT" eventType="touchUpInside" id="jgo-h6-hgL"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.36781541810000001" green="0.36781541810000001" blue="0.36781541810000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="fNm-A4-O2E" secondAttribute="bottom" id="0Qb-PS-XWB"/>
+                                                            <constraint firstItem="fNm-A4-O2E" firstAttribute="centerX" secondItem="4gf-tK-WtB" secondAttribute="centerX" id="0Y0-Gd-usv"/>
                                                             <constraint firstItem="BAW-CI-TLF" firstAttribute="centerY" secondItem="4gf-tK-WtB" secondAttribute="centerY" id="4Ba-ja-Ui0"/>
                                                             <constraint firstItem="BAW-CI-TLF" firstAttribute="centerX" secondItem="4gf-tK-WtB" secondAttribute="centerX" id="HI8-pO-xjR"/>
+                                                            <constraint firstItem="fNm-A4-O2E" firstAttribute="centerY" secondItem="4gf-tK-WtB" secondAttribute="centerY" id="ITM-vU-1j6"/>
+                                                            <constraint firstAttribute="trailing" secondItem="fNm-A4-O2E" secondAttribute="trailing" id="cwR-u0-9Hb"/>
+                                                            <constraint firstItem="fNm-A4-O2E" firstAttribute="top" secondItem="4gf-tK-WtB" secondAttribute="top" id="tMS-TZ-nHc"/>
+                                                            <constraint firstItem="fNm-A4-O2E" firstAttribute="leading" secondItem="4gf-tK-WtB" secondAttribute="leading" id="yVE-ux-bYS"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="svK-o8-7HN">
-                                                <rect key="frame" x="0.0" y="425" width="334" height="66"/>
+                                                <rect key="frame" x="0.0" y="425.5" width="334" height="65.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mr6-u3-mOe">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Place" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mr6-u3-mOe">
                                                         <rect key="frame" x="0.0" y="0.0" width="53" height="21"/>
                                                         <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="21"/>
                                                         <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Place Of The payment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nqh-EW-cXY">
-                                                        <rect key="frame" x="0.0" y="36" width="334" height="30"/>
+                                                        <rect key="frame" x="0.0" y="36" width="334" height="29.5"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert" textContentType="name"/>
@@ -510,6 +533,7 @@
                                             <constraint firstAttribute="trailing" secondItem="0WG-La-ofv" secondAttribute="trailing" id="WJn-9q-ZaT"/>
                                             <constraint firstItem="dca-j8-QNa" firstAttribute="top" secondItem="RRv-s5-ydu" secondAttribute="bottom" constant="30" id="aLJ-3s-ayH"/>
                                             <constraint firstAttribute="trailing" secondItem="dca-j8-QNa" secondAttribute="trailing" id="d6F-d6-k9M"/>
+                                            <constraint firstItem="dca-j8-QNa" firstAttribute="top" secondItem="ubU-NV-QbN" secondAttribute="top" constant="267" id="e87-w8-8OP"/>
                                             <constraint firstAttribute="height" constant="491" id="kLA-zd-j8y"/>
                                             <constraint firstAttribute="bottom" secondItem="svK-o8-7HN" secondAttribute="bottom" id="oZs-Rb-nqk"/>
                                             <constraint firstItem="RRv-s5-ydu" firstAttribute="top" secondItem="0WG-La-ofv" secondAttribute="bottom" constant="30" id="rQd-qo-HNk"/>
