@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum AddTransactionAlert
+enum AddPaymentAlert
 {
     case fillTtile
     case fillDate
@@ -19,7 +19,7 @@ enum AddTransactionAlert
 
 class AlertManager
 {
-    static func addTransactionAlert(alert: AddTransactionAlert)
+    static func addPaymentAlert(alert: AddPaymentAlert)
     {
         switch alert {
         case .fillDate:

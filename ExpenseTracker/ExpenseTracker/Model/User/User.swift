@@ -16,7 +16,8 @@ class User
     var expense: Int
     var balcance: Int
     var income: Int
- 
+    var payment: [Payment] = []
+    
     private init() {
         self.name = ""
         self.surname = ""
@@ -39,6 +40,8 @@ class User
         self.income = Int(entity.income)
         self.balcance = Int(entity.balance)
         self.income = Int(entity.income)
+        self.payment = Payment.convertToPaymentArray(entities: entity.payments ?? [])
+        print(payment.count)
     }
     
     func registerUser(name: String?, surname: String?, balance: Int?)

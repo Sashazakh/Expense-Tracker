@@ -11,6 +11,10 @@ import CoreData
 
 class UserEntity: NSManagedObject
 {
+    var payments: [PaymentEntity]? {
+        return self.paymentEntity? .array as? [PaymentEntity]
+    }
+    
     class func create(user: User, context: NSManagedObjectContext, _ complitionHandler: (UserEntity) -> Void) throws -> Void
     {
         let request: NSFetchRequest<UserEntity> = UserEntity.fetchRequest()
@@ -28,35 +32,29 @@ class UserEntity: NSManagedObject
         }
         
         let userEntity = UserEntity(context: context)
-        
+
         userEntity.convertFromUser(user: user)
         
         complitionHandler(userEntity)
     }
     
-    class func getUser(context: NSManagedObjectContext, _ complitionHandler: (UserEntity) -> Void) throws -> Void
+    class func getUser(context: NSManagedObjectContext) throws -> UserEntity
     {
         
         let request: NSFetchRequest<UserEntity> = UserEntity.fetchRequest()
         
+        var userEntity: UserEntity = UserEntity()
         do {
-            let fetchResult = try UserCoreDataManager.shared.context.fetch(request)
-            
+            let fetchResult = try context.fetch(request)
             if fetchResult.count == 1
             {
-                complitionHandler(fetchResult[0])
-            }
-            else if fetchResult.count == 0
-            {
-                try self.create(user: User.shared, context: context) { (userEntity) in
-                    complitionHandler(userEntity)
-                }
-
+                userEntity = fetchResult[0]
             }
         } catch
         {
             throw error
         }
+        return userEntity
     }
     
     class func editUser(user: User, context: NSManagedObjectContext) throws
@@ -65,19 +63,10 @@ class UserEntity: NSManagedObject
         
         do {
             let fetchResult = try UserCoreDataManager.shared.context.fetch(request)
-            
-            if fetchResult.count == 0
+            if fetchResult.count == 1
             {
-                try UserEntity.create(user: user, context: context, { (userEntity) in
-                    userEntity.convertFromUser(user: user)
-                })
-            }
-            else if fetchResult.count == 1
-            {
-                
-                try UserEntity.getUser(context: context, { (userEntity) in
-                    userEntity.convertFromUser(user: user)
-                })
+                let userEntity = try UserEntity.getUser(context: context)
+                userEntity.convertFromUser(user: user)
             }
         } catch
         {
@@ -92,5 +81,16 @@ class UserEntity: NSManagedObject
         self.balance = Int64(user.balcance)
         self.income = Int64(user.income)
         self.expense = Int64(user.expense)
+    }
+    
+    class func addPayment(payment: PaymentEntity, context: NSManagedObjectContext) throws  -> Void
+    {
+        do {
+            let userEntiy = try UserEntity.getUser(context: context)
+            userEntiy.addToPaymentEntity(payment)
+        } catch
+        {
+            throw error
+        }
     }
 }

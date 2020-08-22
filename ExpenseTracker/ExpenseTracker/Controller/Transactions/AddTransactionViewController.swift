@@ -10,7 +10,7 @@ import UIKit
 
 class AddTransactionViewController: UIViewController, UITextFieldDelegate {
 
-    var currentTransaction: TypeTransaction = .income
+    var currentType: TypeTransaction = .income
     
     @IBOutlet weak var contentView: UIView!
     
@@ -34,13 +34,6 @@ class AddTransactionViewController: UIViewController, UITextFieldDelegate {
     }
     
     private var datePicker: UIDatePicker?
-    @IBOutlet weak var placeTF: UITextField!
-    {
-        didSet
-        {
-            placeTF.delegate = self
-        }
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -82,9 +75,11 @@ class AddTransactionViewController: UIViewController, UITextFieldDelegate {
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true)
     }
+    
     @IBAction func okAction(_ sender: Any) {
         if checkFields()
         {
+            addPayment()
             self.dismiss(animated: true)
         }
     }
@@ -94,22 +89,28 @@ class AddTransactionViewController: UIViewController, UITextFieldDelegate {
         var result: Bool = true
         if titleTF.text == ""
         {
-            let alert: AddTransactionAlert = .fillTtile
-            AlertManager.addTransactionAlert(alert: alert)
+            let alert: AddPaymentAlert = .fillTtile
+            AlertManager.addPaymentAlert(alert: alert)
             result = false
         } else if dateTF.text == ""
         {
-            let alert: AddTransactionAlert = .fillDate
-            AlertManager.addTransactionAlert(alert: alert)
+            let alert: AddPaymentAlert = .fillDate
+            AlertManager.addPaymentAlert(alert: alert)
             result = false
         } else if amountTF.text == ""
         {
-            let alert: AddTransactionAlert = .fillAmount
-            AlertManager.addTransactionAlert(alert: alert)
+            let alert: AddPaymentAlert = .fillAmount
+            AlertManager.addPaymentAlert(alert: alert)
             result = false
         }
-        print(result)
         return result
+    }
+    
+    func addPayment()
+    {
+        let payment: Payment = Payment(title: titleTF.text!, date: dateTF.text!, amount: Int(amountTF.text!)!, type: currentType)
+        PaymentCoreDataManager.shared.addPayment(payment: payment)
+        User.shared.payment.append(payment)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -119,12 +120,12 @@ class AddTransactionViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func expenseAction(_ sender: Any) {
-        currentTransaction = .expense
+        currentType = .expense
         expenseView.backgroundColor = #colorLiteral(red: 0.5450980392, green: 0, blue: 0, alpha: 0.6986836473)
         incomeView.backgroundColor = #colorLiteral(red: 0.3678154181, green: 0.3678154181, blue: 0.3678154181, alpha: 1)
     }
     @IBAction func incomeAction(_ sender: Any) {
-        currentTransaction = .income
+        currentType = .income
         incomeView.backgroundColor = #colorLiteral(red: 0, green: 0.3921568627, blue: 0, alpha: 0.6977739726)
         expenseView.backgroundColor = #colorLiteral(red: 0.3678154181, green: 0.3678154181, blue: 0.3678154181, alpha: 1)
     }

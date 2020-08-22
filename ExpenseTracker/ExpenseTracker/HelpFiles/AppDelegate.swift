@@ -21,9 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var vc = UIViewController()
         if UserCoreDataManager.shared.isRegistered()
         {
-            UserCoreDataManager.shared.findOrCreate(user: User.shared) { (userEntity) in
-                User.shared.convertEntity(entity: userEntity)
-            }
+            User.shared.convertEntity(entity: UserCoreDataManager.shared.getUserEntity())
             vc = storyboard.instantiateViewController(withIdentifier: "mainTabBarVc")
         } else
         {
@@ -56,6 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
+//        UserCoreDataManager.shared.editUser(user: User.shared)
         self.saveContext()
     }
 

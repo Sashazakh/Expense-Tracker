@@ -44,4 +44,36 @@ class UserCoreDataManager: BaseCoreDataManager
             fatalError("Unresolved error \(error)")
         }
     }
+    
+    func editUser(user: User)
+    {
+        do {
+            try UserEntity.editUser(user: user, context: self.context)
+            
+            try context.save()
+        } catch
+        {
+            fatalError("Unresolved error \(error)")
+        }
+    }
+    
+    func getUserEntity() -> UserEntity
+    {
+        do
+        {
+            return try UserEntity.getUser(context: self.context)
+        } catch
+        {
+             fatalError("Unresolved error \(error)")
+        }
+    }
+    
+    func addPayment(payment: PaymentEntity)
+    {
+        do {
+            try UserEntity.addPayment(payment: payment, context: self.context)
+        } catch {
+             fatalError("Unresolved error \(error)")
+        }
+    }
 }

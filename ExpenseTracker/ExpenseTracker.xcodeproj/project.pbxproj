@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D61F3DF924EF9FB20038ED73 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61F3DF824EF9FB20038ED73 /* Transaction.swift */; };
+		D61F3DF924EF9FB20038ED73 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61F3DF824EF9FB20038ED73 /* Payment.swift */; };
 		D61F3DFE24EFB4B70038ED73 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61F3DFD24EFB4B70038ED73 /* AlertManager.swift */; };
 		D62E352F24E6CD11004F4C3A /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62E352E24E6CD11004F4C3A /* UserEntity.swift */; };
 		D62E353224E6CF27004F4C3A /* UserCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62E353124E6CF27004F4C3A /* UserCoreDataManager.swift */; };
@@ -23,10 +23,12 @@
 		D6BB253424E5B94300E814C8 /* ExpenseTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6BB253224E5B94300E814C8 /* ExpenseTracker.xcdatamodeld */; };
 		D6BB253624E5B94300E814C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6BB253524E5B94300E814C8 /* Assets.xcassets */; };
 		D6BB253924E5B94300E814C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BB253724E5B94300E814C8 /* LaunchScreen.storyboard */; };
+		D6EC311E24EFE28200ABE463 /* PaymentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC311D24EFE28200ABE463 /* PaymentEntity.swift */; };
+		D6EC312024EFEF1100ABE463 /* PaymentCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC311F24EFEF1100ABE463 /* PaymentCoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D61F3DF824EF9FB20038ED73 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		D61F3DF824EF9FB20038ED73 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		D61F3DFD24EFB4B70038ED73 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		D62E352E24E6CD11004F4C3A /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		D62E353124E6CF27004F4C3A /* UserCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoreDataManager.swift; sourceTree = "<group>"; };
@@ -44,6 +46,8 @@
 		D6BB253524E5B94300E814C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6BB253824E5B94300E814C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6BB253A24E5B94300E814C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6EC311D24EFE28200ABE463 /* PaymentEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentEntity.swift; sourceTree = "<group>"; };
+		D6EC311F24EFEF1100ABE463 /* PaymentCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +64,7 @@
 		D61F3DFA24EF9FB70038ED73 /* Transaction */ = {
 			isa = PBXGroup;
 			children = (
-				D61F3DF824EF9FB20038ED73 /* Transaction.swift */,
+				D61F3DF824EF9FB20038ED73 /* Payment.swift */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -70,6 +74,7 @@
 			children = (
 				D62E353324E6D19F004F4C3A /* BaseCoreDataManager.swift */,
 				D62E353124E6CF27004F4C3A /* UserCoreDataManager.swift */,
+				D6EC311F24EFEF1100ABE463 /* PaymentCoreDataManager.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -87,6 +92,7 @@
 			children = (
 				D62E352E24E6CD11004F4C3A /* UserEntity.swift */,
 				D6BB253224E5B94300E814C8 /* ExpenseTracker.xcdatamodeld */,
+				D6EC311D24EFE28200ABE463 /* PaymentEntity.swift */,
 			);
 			path = DataBaseModels;
 			sourceTree = "<group>";
@@ -94,6 +100,7 @@
 		D62E353024E6CF10004F4C3A /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				D6EC311C24EFE0ED00ABE463 /* DataManager */,
 				D61F3DFC24EFB4A80038ED73 /* Alert */,
 				D61F3DFB24EFB49C0038ED73 /* CoreData */,
 			);
@@ -209,6 +216,13 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		D6EC311C24EFE0ED00ABE463 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -281,12 +295,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D62E353224E6CF27004F4C3A /* UserCoreDataManager.swift in Sources */,
+				D6EC312024EFEF1100ABE463 /* PaymentCoreDataManager.swift in Sources */,
 				D62E353924E7FBEE004F4C3A /* MainBar.swift in Sources */,
-				D61F3DF924EF9FB20038ED73 /* Transaction.swift in Sources */,
+				D61F3DF924EF9FB20038ED73 /* Payment.swift in Sources */,
 				D62E353C24E83234004F4C3A /* ProfileViewController.swift in Sources */,
 				D67B2BAF24EE69C0005D1E09 /* AddTransactionViewController.swift in Sources */,
 				D61F3DFE24EFB4B70038ED73 /* AlertManager.swift in Sources */,
 				D62E353624E7EDD8004F4C3A /* TabBarController.swift in Sources */,
+				D6EC311E24EFE28200ABE463 /* PaymentEntity.swift in Sources */,
 				D66F1FE924E6B9DD00C35C8C /* User.swift in Sources */,
 				D66F1FE524E6A8C300C35C8C /* RegisterViewController.swift in Sources */,
 				D6BB253424E5B94300E814C8 /* ExpenseTracker.xcdatamodeld in Sources */,
