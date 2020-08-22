@@ -38,7 +38,6 @@
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RkO-Jv-2n6">
                                                 <rect key="frame" x="0.0" y="27" width="374" height="30"/>
-                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert" returnKeyType="done" textContentType="name"/>
                                             </textField>
@@ -321,24 +320,6 @@
             </objects>
             <point key="canvasLocation" x="1114.4927536231885" y="783.48214285714278"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="io6-3p-fNx">
-            <objects>
-                <viewController id="Qwi-Kd-g0T" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gds-3f-laD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="G99-nR-8tu"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="S8t-8u-98B">
-                        <color key="badgeColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f9o-7L-Sau" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2235" y="743"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2nH-y5-YyB">
             <objects>
@@ -356,7 +337,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="esi-s1-xqi" kind="relationship" relationship="viewControllers" id="Av7-GW-X9I"/>
-                        <segue destination="Qwi-Kd-g0T" kind="relationship" relationship="viewControllers" id="4i5-cS-4eO"/>
+                        <segue destination="cJn-Nx-bR5" kind="relationship" relationship="viewControllers" id="aUP-Bh-qdy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sgz-QD-Eff" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -563,6 +544,40 @@
             </objects>
             <point key="canvasLocation" x="3923.188405797102" y="-24.107142857142858"/>
         </scene>
+        <!--Your Payments-->
+        <scene sceneID="PEB-No-bIe">
+            <objects>
+                <viewController id="HAt-OJ-3oK" customClass="UserPaymentsViewController" customModule="ExpenseTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="teU-uD-K7Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OW7-Ba-EQK">
+                                <rect key="frame" x="20" y="108" width="374" height="665"/>
+                                <color key="backgroundColor" red="0.25487014651298523" green="0.25492024421691895" blue="0.25486692786216736" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1253264248" green="0.12920945880000001" blue="0.14165943859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OW7-Ba-EQK" firstAttribute="top" secondItem="hpv-Ve-zyv" secondAttribute="top" constant="20" id="Jy0-w4-xCT"/>
+                            <constraint firstItem="hpv-Ve-zyv" firstAttribute="bottom" secondItem="OW7-Ba-EQK" secondAttribute="bottom" constant="40" id="LAh-qH-8ua"/>
+                            <constraint firstItem="hpv-Ve-zyv" firstAttribute="trailing" secondItem="OW7-Ba-EQK" secondAttribute="trailing" constant="20" id="RgE-Jx-An0"/>
+                            <constraint firstItem="OW7-Ba-EQK" firstAttribute="leading" secondItem="hpv-Ve-zyv" secondAttribute="leading" constant="20" id="ozC-2q-aVE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hpv-Ve-zyv"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Your Payments" id="PeT-Zs-ev7"/>
+                    <connections>
+                        <outlet property="tableView" destination="OW7-Ba-EQK" id="rMi-SC-R76"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TU7-6L-wT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4402.898550724638" y="742.63392857142856"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="dq0-3O-7Bo">
             <objects>
@@ -587,8 +602,34 @@
             </objects>
             <point key="canvasLocation" x="3013.04347826087" y="-24.107142857142858"/>
         </scene>
+        <!--Payments-->
+        <scene sceneID="mvo-dn-JrR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cJn-Nx-bR5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Payments" image="Payments" id="x8p-CM-vqi"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zSM-pN-9b4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.40837829819999999" green="0.40837829819999999" blue="0.40837829819999999" alpha="0.65287885270000001" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.21960784310000001" green="0.2196240723" blue="0.21957683559999999" alpha="0.65000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="24"/>
+                            <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HAt-OJ-3oK" kind="relationship" relationship="rootViewController" id="DQi-sI-uwO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Rv-bv-vM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3383" y="743"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Payments" width="30" height="30"/>
         <image name="Profile" width="30" height="30"/>
         <image name="cancelIcon" width="30" height="30"/>
         <image name="okIcon" width="30" height="30"/>

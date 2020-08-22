@@ -63,6 +63,5 @@ class User
             break
         }
         self.payment.append(payment)
-        UserCoreDataManager.shared.editUser(user: self)
     }
 }

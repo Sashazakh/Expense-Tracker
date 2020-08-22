@@ -25,6 +25,9 @@
 		D6BB253924E5B94300E814C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BB253724E5B94300E814C8 /* LaunchScreen.storyboard */; };
 		D6EC311E24EFE28200ABE463 /* PaymentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC311D24EFE28200ABE463 /* PaymentEntity.swift */; };
 		D6EC312024EFEF1100ABE463 /* PaymentCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC311F24EFEF1100ABE463 /* PaymentCoreDataManager.swift */; };
+		D6EC312324F151C800ABE463 /* UserPaymentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC312224F151C800ABE463 /* UserPaymentsViewController.swift */; };
+		D6EC312624F152F600ABE463 /* UserPaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC312424F152F600ABE463 /* UserPaymentCell.swift */; };
+		D6EC312A24F1612B00ABE463 /* UserPaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6EC312924F1612B00ABE463 /* UserPaymentCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		D6BB253A24E5B94300E814C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6EC311D24EFE28200ABE463 /* PaymentEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentEntity.swift; sourceTree = "<group>"; };
 		D6EC311F24EFEF1100ABE463 /* PaymentCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCoreDataManager.swift; sourceTree = "<group>"; };
+		D6EC312224F151C800ABE463 /* UserPaymentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPaymentsViewController.swift; sourceTree = "<group>"; };
+		D6EC312424F152F600ABE463 /* UserPaymentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPaymentCell.swift; sourceTree = "<group>"; };
+		D6EC312924F1612B00ABE463 /* UserPaymentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserPaymentCell.xib; path = ../../../../../../../.Trash/UserPaymentCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +214,7 @@
 		D6BB254224E5BA0500E814C8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D6EC312124F151AE00ABE463 /* UserPayments */,
 				D67B2BAD24EE69A3005D1E09 /* Transactions */,
 				D62E353D24E8327C004F4C3A /* Registration */,
 				D62E353A24E83215004F4C3A /* Profile */,
@@ -221,6 +228,24 @@
 			children = (
 			);
 			path = DataManager;
+			sourceTree = "<group>";
+		};
+		D6EC312124F151AE00ABE463 /* UserPayments */ = {
+			isa = PBXGroup;
+			children = (
+				D6EC312824F152FA00ABE463 /* UserPaymentCell */,
+				D6EC312224F151C800ABE463 /* UserPaymentsViewController.swift */,
+			);
+			path = UserPayments;
+			sourceTree = "<group>";
+		};
+		D6EC312824F152FA00ABE463 /* UserPaymentCell */ = {
+			isa = PBXGroup;
+			children = (
+				D6EC312924F1612B00ABE463 /* UserPaymentCell.xib */,
+				D6EC312424F152F600ABE463 /* UserPaymentCell.swift */,
+			);
+			path = UserPaymentCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6BB253924E5B94300E814C8 /* LaunchScreen.storyboard in Resources */,
+				D6EC312A24F1612B00ABE463 /* UserPaymentCell.xib in Resources */,
 				D6BB253624E5B94300E814C8 /* Assets.xcassets in Resources */,
 				D67B2BB624EEC140005D1E09 /* Main.storyboard in Resources */,
 			);
@@ -296,8 +322,10 @@
 			files = (
 				D62E353224E6CF27004F4C3A /* UserCoreDataManager.swift in Sources */,
 				D6EC312024EFEF1100ABE463 /* PaymentCoreDataManager.swift in Sources */,
+				D6EC312624F152F600ABE463 /* UserPaymentCell.swift in Sources */,
 				D62E353924E7FBEE004F4C3A /* MainBar.swift in Sources */,
 				D61F3DF924EF9FB20038ED73 /* Payment.swift in Sources */,
+				D6EC312324F151C800ABE463 /* UserPaymentsViewController.swift in Sources */,
 				D62E353C24E83234004F4C3A /* ProfileViewController.swift in Sources */,
 				D67B2BAF24EE69C0005D1E09 /* AddTransactionViewController.swift in Sources */,
 				D61F3DFE24EFB4B70038ED73 /* AlertManager.swift in Sources */,

@@ -42,7 +42,6 @@ class ProfileViewController: UIViewController {
     
     func loadUser()
     {
-        print(User.shared.balcance)
         userNameLabel.text = User.shared.name
         surnameLabel.text = User.shared.surname
         totalBalanceLabel.text = String(User.shared.balcance) + " $"
