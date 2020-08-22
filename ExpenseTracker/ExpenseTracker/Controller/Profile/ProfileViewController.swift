@@ -37,11 +37,12 @@ class ProfileViewController: UIViewController {
         incomeView.layer.cornerRadius = 20
         incomeView.clipsToBounds = true
     
-        loadUser()
+//        loadUser()
     }
     
     func loadUser()
     {
+        print(User.shared.balcance)
         userNameLabel.text = User.shared.name
         surnameLabel.text = User.shared.surname
         totalBalanceLabel.text = String(User.shared.balcance) + " $"
@@ -50,4 +51,8 @@ class ProfileViewController: UIViewController {
         
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.loadUser()
+    }
 }

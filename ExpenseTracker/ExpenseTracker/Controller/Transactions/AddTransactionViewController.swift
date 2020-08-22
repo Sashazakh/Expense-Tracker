@@ -110,7 +110,7 @@ class AddTransactionViewController: UIViewController, UITextFieldDelegate {
     {
         let payment: Payment = Payment(title: titleTF.text!, date: dateTF.text!, amount: Int(amountTF.text!)!, type: currentType)
         PaymentCoreDataManager.shared.addPayment(payment: payment)
-        User.shared.payment.append(payment)
+        User.shared.addPayment(payment: payment)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

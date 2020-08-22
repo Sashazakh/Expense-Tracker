@@ -41,7 +41,6 @@ class User
         self.balcance = Int(entity.balance)
         self.income = Int(entity.income)
         self.payment = Payment.convertToPaymentArray(entities: entity.payments ?? [])
-        print(payment.count)
     }
     
     func registerUser(name: String?, surname: String?, balance: Int?)
@@ -49,5 +48,21 @@ class User
         self.name = name ?? ""
         self.surname = surname ?? ""
         self.balcance = balance ?? 0
+    }
+    
+    func addPayment(payment: Payment)
+    {
+        switch payment.type {
+        case .expense:
+            self.expense += payment.amount
+            self.balcance -= payment.amount
+        case .income:
+            self.income += payment.amount
+            self.balcance += payment.amount
+        default:
+            break
+        }
+        self.payment.append(payment)
+        UserCoreDataManager.shared.editUser(user: self)
     }
 }
