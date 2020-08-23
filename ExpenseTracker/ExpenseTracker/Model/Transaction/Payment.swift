@@ -28,6 +28,14 @@ class Payment
         self.detail = detail
     }
 
+    init() {
+        self.title = ""
+        self.date = ""
+        self.amount = 0
+        self.type = .income
+        self.id = UUID().uuidString
+        self.detail = ""
+    }
     class func convertToPaymentArray(entities: [PaymentEntity]) -> [Payment]
     {
         var payments: [Payment] = []

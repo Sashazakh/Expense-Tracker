@@ -556,6 +556,82 @@
             </objects>
             <point key="canvasLocation" x="3923.188405797102" y="-24.107142857142858"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="vwb-th-lVk">
+            <objects>
+                <viewController storyboardIdentifier="detailVC" id="Xzy-bd-g5K" customClass="DetailViewController" customModule="ExpenseTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="75i-zP-hkc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" restorationIdentifier="detailVC" translatesAutoresizingMaskIntoConstraints="NO" id="z3Q-Ep-vgk">
+                                <rect key="frame" x="20" y="64" width="374" height="758"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="Ych-ei-bJL">
+                                        <rect key="frame" x="20" y="20" width="334" height="165"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gl4-fw-mdP">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="30"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="30"/>
+                                                <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Al-y2-vOR">
+                                                <rect key="frame" x="0.0" y="72" width="334" height="26"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="26"/>
+                                                <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Osd-f5-pLq">
+                                                <rect key="frame" x="0.0" y="140" width="334" height="25"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="25"/>
+                                                <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpQ-9L-34J">
+                                        <rect key="frame" x="47" y="314" width="280" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="280" id="FVu-rP-S4v"/>
+                                            <constraint firstAttribute="height" constant="130" id="vuG-ga-X58"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                        <color key="textColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.27054256200790405" green="0.27053391933441162" blue="0.27463266253471375" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Ych-ei-bJL" firstAttribute="top" secondItem="z3Q-Ep-vgk" secondAttribute="top" constant="20" id="CXU-Qx-Wcv"/>
+                                    <constraint firstItem="Ych-ei-bJL" firstAttribute="leading" secondItem="z3Q-Ep-vgk" secondAttribute="leading" constant="20" id="Dul-ze-Zv0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ych-ei-bJL" secondAttribute="trailing" constant="20" id="UUg-Oq-yUk"/>
+                                    <constraint firstItem="wpQ-9L-34J" firstAttribute="centerX" secondItem="z3Q-Ep-vgk" secondAttribute="centerX" id="kma-Lg-yAG"/>
+                                    <constraint firstItem="wpQ-9L-34J" firstAttribute="centerY" secondItem="z3Q-Ep-vgk" secondAttribute="centerY" id="yUb-Ig-pbL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12532642483711243" green="0.12920945882797241" blue="0.1416594386100769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IkC-Kt-sxl" firstAttribute="bottom" secondItem="z3Q-Ep-vgk" secondAttribute="bottom" constant="40" id="Ubh-cK-Kzq"/>
+                            <constraint firstItem="z3Q-Ep-vgk" firstAttribute="leading" secondItem="IkC-Kt-sxl" secondAttribute="leading" constant="20" id="eaP-GS-6T4"/>
+                            <constraint firstItem="z3Q-Ep-vgk" firstAttribute="top" secondItem="IkC-Kt-sxl" secondAttribute="top" constant="20" id="v9w-sj-AAU"/>
+                            <constraint firstItem="IkC-Kt-sxl" firstAttribute="trailing" secondItem="z3Q-Ep-vgk" secondAttribute="trailing" constant="20" id="x6C-gh-rCD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IkC-Kt-sxl"/>
+                    </view>
+                    <connections>
+                        <outlet property="amountLabel" destination="Osd-f5-pLq" id="Et3-2F-xxy"/>
+                        <outlet property="contentView" destination="z3Q-Ep-vgk" id="Mhb-ht-70h"/>
+                        <outlet property="dateLabel" destination="9Al-y2-vOR" id="CUU-VE-g5T"/>
+                        <outlet property="discreptionLabel" destination="wpQ-9L-34J" id="6kH-Zv-U3R"/>
+                        <outlet property="titleLabel" destination="gl4-fw-mdP" id="gGJ-hd-kYQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8lk-qw-Bfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6200.0000000000009" y="742.63392857142856"/>
+        </scene>
         <!--Your Payments-->
         <scene sceneID="PEB-No-bIe">
             <objects>
@@ -624,6 +700,7 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.40837829819999999" green="0.40837829819999999" blue="0.40837829819999999" alpha="0.65287885270000001" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.87426036600000001" green="0.87820714710000003" blue="0.8946936727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.21960784310000001" green="0.2196240723" blue="0.21957683559999999" alpha="0.65000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="24"/>

@@ -51,4 +51,10 @@ extension UserPaymentsViewController: UITableViewDelegate, UITableViewDataSource
         return 100
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "detailVC") as! DetailViewController
+        vc.payment = User.shared.payment[indexPath.row]
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }

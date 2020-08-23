@@ -23,6 +23,7 @@
 		D6BB253424E5B94300E814C8 /* ExpenseTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6BB253224E5B94300E814C8 /* ExpenseTracker.xcdatamodeld */; };
 		D6BB253624E5B94300E814C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6BB253524E5B94300E814C8 /* Assets.xcassets */; };
 		D6BB253924E5B94300E814C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BB253724E5B94300E814C8 /* LaunchScreen.storyboard */; };
+		D6C9CC0A24F284FD00222C6B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C9CC0924F284FD00222C6B /* DetailViewController.swift */; };
 		D6EC311E24EFE28200ABE463 /* PaymentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC311D24EFE28200ABE463 /* PaymentEntity.swift */; };
 		D6EC312024EFEF1100ABE463 /* PaymentCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC311F24EFEF1100ABE463 /* PaymentCoreDataManager.swift */; };
 		D6EC312324F151C800ABE463 /* UserPaymentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EC312224F151C800ABE463 /* UserPaymentsViewController.swift */; };
@@ -49,6 +50,7 @@
 		D6BB253524E5B94300E814C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6BB253824E5B94300E814C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6BB253A24E5B94300E814C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6C9CC0924F284FD00222C6B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D6EC311D24EFE28200ABE463 /* PaymentEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentEntity.swift; sourceTree = "<group>"; };
 		D6EC311F24EFEF1100ABE463 /* PaymentCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCoreDataManager.swift; sourceTree = "<group>"; };
 		D6EC312224F151C800ABE463 /* UserPaymentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPaymentsViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +225,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		D6C9CC0824F284AE00222C6B /* Detail Info */ = {
+			isa = PBXGroup;
+			children = (
+				D6C9CC0924F284FD00222C6B /* DetailViewController.swift */,
+			);
+			path = "Detail Info";
+			sourceTree = "<group>";
+		};
 		D6EC311C24EFE0ED00ABE463 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +243,7 @@
 		D6EC312124F151AE00ABE463 /* UserPayments */ = {
 			isa = PBXGroup;
 			children = (
+				D6C9CC0824F284AE00222C6B /* Detail Info */,
 				D6EC312824F152FA00ABE463 /* UserPaymentCell */,
 				D6EC312224F151C800ABE463 /* UserPaymentsViewController.swift */,
 			);
@@ -329,6 +340,7 @@
 				D62E353C24E83234004F4C3A /* ProfileViewController.swift in Sources */,
 				D67B2BAF24EE69C0005D1E09 /* AddTransactionViewController.swift in Sources */,
 				D61F3DFE24EFB4B70038ED73 /* AlertManager.swift in Sources */,
+				D6C9CC0A24F284FD00222C6B /* DetailViewController.swift in Sources */,
 				D62E353624E7EDD8004F4C3A /* TabBarController.swift in Sources */,
 				D6EC311E24EFE28200ABE463 /* PaymentEntity.swift in Sources */,
 				D66F1FE924E6B9DD00C35C8C /* User.swift in Sources */,
