@@ -546,7 +546,7 @@
                         <outlet property="amountTF" destination="lIx-96-Nnq" id="wHK-cI-HSm"/>
                         <outlet property="contentView" destination="57a-zO-oHC" id="o8Q-Ya-ipB"/>
                         <outlet property="dateTF" destination="bk6-mT-Qc2" id="kW6-6s-grD"/>
-                        <outlet property="detailTF" destination="XFD-yR-jPA" id="Hby-Ej-ueb"/>
+                        <outlet property="detailTF" destination="TFW-qC-CJz" id="d0c-04-72A"/>
                         <outlet property="expenseView" destination="UYf-2l-ibJ" id="aNh-GF-kkn"/>
                         <outlet property="incomeView" destination="4gf-tK-WtB" id="wla-sh-SR6"/>
                         <outlet property="titleTF" destination="wep-hR-054" id="DM1-eY-R3O"/>

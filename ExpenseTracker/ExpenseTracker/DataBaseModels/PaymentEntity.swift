@@ -33,6 +33,7 @@ class PaymentEntity: NSManagedObject
         paymentEntity.id = payment.id
         paymentEntity.title = payment.title
         paymentEntity.type = payment.type.rawValue
+        paymentEntity.detail = payment.detail
         return paymentEntity
     }
     

@@ -33,14 +33,15 @@ class AddTransactionViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBOutlet weak var detailTF: UIStackView!
+
+    
+    @IBOutlet weak var detailTF: UITextField!
     {
         didSet
         {
-            amountTF.delegate = self
+            detailTF.delegate = self
         }
     }
-    
     private var datePicker: UIDatePicker?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,9 +64,6 @@ class AddTransactionViewController: UIViewController, UITextFieldDelegate {
         view.addGestureRecognizer(tapScreen)
         
         incomeView.backgroundColor = #colorLiteral(red: 0, green: 0.3921568627, blue: 0, alpha: 0.6977739726)
-//
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     
@@ -127,7 +125,7 @@ class AddTransactionViewController: UIViewController, UITextFieldDelegate {
     
     func addPayment()
     {
-        let payment: Payment = Payment(title: titleTF.text!, date: dateTF.text!, amount: Int(amountTF.text!)!, type: currentType)
+        let payment: Payment = Payment(title: titleTF.text!, date: dateTF.text!, amount: Int(amountTF.text!)!, type: currentType, detail: detailTF.text)
         PaymentCoreDataManager.shared.addPayment(payment: payment)
         User.shared.addPayment(payment: payment)
     }

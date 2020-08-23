@@ -17,13 +17,15 @@ class Payment
     var date: String
     var amount: Int
     var type: TypeTransaction
+    var detail: String?
     
-    init(title: String, date: String, amount: Int, type: TypeTransaction) {
+    init(title: String, date: String, amount: Int, type: TypeTransaction, detail: String?) {
         self.title = title
         self.date = date
         self.amount = amount
         self.type = type
         self.id = UUID().uuidString
+        self.detail = detail
     }
 
     class func convertToPaymentArray(entities: [PaymentEntity]) -> [Payment]
@@ -38,7 +40,7 @@ class Payment
     
     class func convertToPayment(entity: PaymentEntity) -> Payment
     {
-        return Payment(title: entity.title ?? "", date: entity.date ?? "", amount: Int(entity.amount), type: TypeTransaction(rawValue: entity.type ?? "income") ?? .income)
+        return Payment(title: entity.title ?? "", date: entity.date ?? "", amount: Int(entity.amount), type: TypeTransaction(rawValue: entity.type ?? "income") ?? .income, detail: entity.detail)
     }
 }
 
