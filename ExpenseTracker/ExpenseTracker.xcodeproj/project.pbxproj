@@ -108,7 +108,6 @@
 		D62E353024E6CF10004F4C3A /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				D6EC311C24EFE0ED00ABE463 /* DataManager */,
 				D61F3DFC24EFB4A80038ED73 /* Alert */,
 				D61F3DFB24EFB49C0038ED73 /* CoreData */,
 			);
@@ -140,12 +139,12 @@
 			path = Registration;
 			sourceTree = "<group>";
 		};
-		D66F1FE624E6A8CD00C35C8C /* HelpFiles */ = {
+		D66F1FE624E6A8CD00C35C8C /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				D6BB252B24E5B94300E814C8 /* AppDelegate.swift */,
 			);
-			path = HelpFiles;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		D66F1FE724E6B9D100C35C8C /* User */ = {
@@ -185,7 +184,7 @@
 			children = (
 				D62E353024E6CF10004F4C3A /* Managers */,
 				D62E352D24E6CD01004F4C3A /* DataBaseModels */,
-				D66F1FE624E6A8CD00C35C8C /* HelpFiles */,
+				D66F1FE624E6A8CD00C35C8C /* Core */,
 				D6BB254224E5BA0500E814C8 /* Controller */,
 				D6BB254124E5B9F200E814C8 /* View */,
 				D6BB254024E5B9EC00E814C8 /* Model */,
@@ -231,13 +230,6 @@
 				D6C9CC0924F284FD00222C6B /* DetailViewController.swift */,
 			);
 			path = "Detail Info";
-			sourceTree = "<group>";
-		};
-		D6EC311C24EFE0ED00ABE463 /* DataManager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DataManager;
 			sourceTree = "<group>";
 		};
 		D6EC312124F151AE00ABE463 /* UserPayments */ = {

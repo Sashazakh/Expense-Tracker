@@ -67,13 +67,5 @@ class UserCoreDataManager: BaseCoreDataManager
              fatalError("Unresolved error \(error)")
         }
     }
-    
-    func addPayment(payment: PaymentEntity)
-    {
-        do {
-            try UserEntity.addPayment(payment: payment, context: self.context)
-        } catch {
-             fatalError("Unresolved error \(error)")
-        }
-    }
+
 }
